@@ -1,4 +1,4 @@
-{
+/*{
 	id: "T_TFGateBot_Demoman_Normal",
 	className: "Demoman",
 	changeAttributes: {
@@ -20,4 +20,4 @@
 			}]
 		}
 	}
-},
+},*/

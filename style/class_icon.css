@@ -250,5 +250,5 @@
 .TFClassIconGrey
 {
     opacity: 0.3;
-	filter: Alpha (opacity=30);
+	//filter: Alpha (opacity=30);
 }

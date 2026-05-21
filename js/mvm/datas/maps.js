@@ -1,7 +1,7 @@
 var MAP_NO_MAP_SET = new Map("");
 var MAP_DECOY = new Map("mvm_decoy");
 var MAP_COALTOWN = new Map("mvm_coaltown");
-var MAP_COALTOWN_EVENT = new Map("mvm_coaltown_event");
+var MAP_GHOSTOWN = new Map("mvm_ghostown");
 var MAP_MANNWORKS = new Map("mvm_mannworks");
 var MAP_BIGROCK = new Map("mvm_bigrock");
 var MAP_ISOLATION = new Map("mvm_isolation_b4");
@@ -12,7 +12,7 @@ var MAP_ROTTENBURG = new Map("mvm_rottenburg");
 MAP_NO_MAP_SET.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy")
 MAP_DECOY.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_invasion spawnbot_right spawnbot_left spawnbot_single_flag");
 MAP_COALTOWN.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_giant");
-MAP_COALTOWN_EVENT.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_giant");
+MAP_GHOSTOWN.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_giant");
 MAP_MANNWORKS.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_lower spawnbot_right spawnbot_left");
 MAP_BIGROCK.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy");
 MAP_ISOLATION.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_house spawnbot_giant_house");
@@ -22,7 +22,7 @@ MAP_ROTTENBURG.addSpawns("spawnbot flankers spawnbot_chief spawnbot_mission_sent
 
 MAP_DECOY.addTags("nav_prefer_flank_right nav_prefer_flank_left");
 MAP_COALTOWN.addTags("nav_prefer_flank_right nav_prefer_flank_left special_main_right special_main_left");
-MAP_COALTOWN_EVENT.addTags("nav_prefer_flank_right nav_prefer_flank_left special_main_right special_main_left");
+MAP_GHOSTOWN.addTags("nav_prefer_flank_right nav_prefer_flank_left special_main_right special_main_left");
 MAP_BIGROCK.addTags("nav_prefer_flank_right nav_prefer_flank_left special_main_right special_main_left");
 MAP_ISOLATION.addTags("nav_prefer_flank_right");
 MAP_SKULLCOVE.addTags("nav_avoid_left nav_avoid_right nav_prefer_flank_right nav_prefer_flank_left nav_prefer_flank_early_right nav_prefer_flank_early_left");
@@ -32,7 +32,7 @@ MAP_ROTTENBURG.addTags("Flankers");
 MAP_NO_MAP_SET.addTankPaths("boss_path_1");
 MAP_DECOY.addTankPaths("boss_path_1");
 MAP_COALTOWN.addTankPaths("boss_path_1");
-MAP_COALTOWN_EVENT.addTankPaths("boss_path_1");
+MAP_GHOSTOWN.addTankPaths("boss_path_1");
 MAP_MANNWORKS.addTankPaths("boss_path_1 boss_path2_1");
 MAP_BIGROCK.addTankPaths("boss_path_1 boss_path_a1");
 MAP_ISOLATION.addTankPaths("tank_path_a_1 tank_path_b_1");
@@ -43,7 +43,7 @@ MAP_ROTTENBURG.addTankPaths("tank_path_a_10 tank_path_b_10");
 MAP_NO_MAP_SET.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
 MAP_DECOY.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
 MAP_COALTOWN.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
-MAP_COALTOWN_EVENT.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_relay_666", true).setDoneOutput("wave_finished_relay");
+MAP_GHOSTOWN.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_relay_666", true).setDoneOutput("wave_finished_relay");
 MAP_MANNWORKS.setStartWaveOutput("bombpath_arrows_clear_relay").setStartWaveOutput("bombpath_arrows_clear_relay_ironman", true).setDoneOutput("bombpath_wavefinished");
 MAP_BIGROCK.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
 MAP_ISOLATION.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
@@ -54,7 +54,7 @@ MAP_ROTTENBURG.setStartWaveOutput("wave_start_relay_classic").setDoneOutput("wav
 MapList[""] = MAP_NO_MAP_SET;
 MapList["mvm_decoy"] = MAP_DECOY;
 MapList["mvm_coaltown"] = MAP_COALTOWN;
-MapList["mvm_coaltown_event"] = MAP_COALTOWN_EVENT;
+MapList["mvm_ghostown"] = MAP_GHOSTOWN;
 MapList["mvm_mannworks"] = MAP_MANNWORKS;
 MapList["mvm_bigrock"] = MAP_BIGROCK;
 MapList["mvm_isolation_b4"] = MAP_ISOLATION;
@@ -76,7 +76,7 @@ MAP_COALTOWN.addPopulation("CPU Slaughter", "mvm_coaltown_advanced2.xml");
 MAP_COALTOWN.addPopulation("Cave-in", "mvm_coaltown_intermediate.xml");
 MAP_COALTOWN.addPopulation("Quarry", "mvm_coaltown_intermediate2.xml");
 MAP_COALTOWN.addPopulation("Cataclysm", "mvm_coaltown_expert1.xml");
-MAP_COALTOWN_EVENT.addPopulation("Caliginous Caper", "mvm_ghost_town.xml");
+MAP_GHOSTOWN.addPopulation("Caliginous Caper", "mvm_ghost_town.xml");
 
 MAP_MANNWORKS.addPopulation("Mann-euvers", "mvm_mannworks.xml");
 MAP_MANNWORKS.addPopulation("Machine Massacre", "mvm_mannworks_advanced.xml");

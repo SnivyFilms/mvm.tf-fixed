@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!doctype html>
+<html>
+<head>
+		<title>TF2 Mann vs Machine wave generator</title>
+		<link rel="stylesheet" type="text/css" href="style/mvm.css" />
+		<link rel="stylesheet" type="text/css" href="style/population.css" />
+		<link rel="stylesheet" type="text/css" href="style/bot.css" />
+		<link rel="stylesheet" type="text/css" href="style/wave.css" />
+		<link rel="stylesheet" type="text/css" href="style/wavespawn.css" />
+		<link rel="stylesheet" type="text/css" href="style/class_icon.css" />   
+		<link rel="stylesheet" type="text/css" href="style/class_thumb.css" />
+		<link rel="stylesheet" type="text/css" href="style/template.css" />
+		<link rel="stylesheet" type="text/css" href="style/mission.css" />
+		<link rel="stylesheet" type="text/css" href="style/missions.css" />
+		<link rel="stylesheet" type="text/css" href="style/attribute.css" />
+		<link rel="stylesheet" type="text/css" href="style/attributes.css" />
+		<link rel="stylesheet" type="text/css" href="style/message_manager.css" />
+		<link rel="stylesheet" type="text/css" href="style/message.css" />
+		<link rel="stylesheet" type="text/css" href="style/framework.css" />
+		<link rel="icon" type="image/png" href="https://mvm.tf/favicon.png" />
+		<script src="js/mvm/datas/bots.js"></script>
+		<!--code-->
+		<script type="text/javascript" language="javascript" src="js/framework/framework.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/utils.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/utils/coreUtils.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/common/notifiable.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/common/panel.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/common/tab.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/common/tabBar.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/common/message.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/plugins/messageManager.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/plugins/i18n.js"></script>
+		<script type="text/javascript" language="javascript" src="js/framework/booststrap.js"></script>
+    	<script src="js/mvm/stringtable.js"></script>
+    	<script src="js/mvm/tf_classes.js"></script>
+    	<script src="js/framework/utils.js"></script>
+    	<script src="js/mvm/defaultvalues.js"></script>
+    	<script src="js/mvm/population.js"></script>
+    	<script src="js/mvm/botattributes.js"></script>
+    	<script src="js/mvm/bot.js"></script>
+    	<script src="js/mvm/botviewer.js"></script>
+    	<script src="js/mvm/wavespawn.js"></script>
+    	<script src="js/mvm/wave.js"></script>
+    	<script src="js/mvm/missions.js"></script>
+    	<script src="js/mvm/mission.js"></script>
+    	<script src="js/mvm/templates.js"></script>
+    	<script src="js/mvm/tf_maps.js"></script>
+    	<script src="js/mvm/datas/maps.js"></script>
+    	<script src="js/mvm/items.js"></script>
+    	<script src="js/mvm/datas/itemlist.js"></script>
+    	<script src="js/mvm/attribute.js"></script>
+    	<script src="js/mvm/datas/attributelist.js"></script>
+    	<script src="js/mvm/randomchoice.js"></script>
+    	<script src="js/mvm/attributes.js"></script>
+	    	<script src="js/mvm/popfile_parser.js"></script>
+    	<script src="js/mvm/loadpopulation.js"></script>
+    	<script src="js/mvm/generate.js"></script>
+    	<script src="js/mvm/generate_output.js"></script>
+    	<script src="js/mvm/help.js"></script>
+    	<script src="js/mvm/contact.js"></script>
+</head>
+<body>
+	<form action="javascript:void(0)" enctype="multipart/form-data" method="post" target="hiddenmyiframe" id="sendfile">
+		<input type="file" id="popfile" name="popfile"/>
+     	<input type="submit" value="Load pop file" />
+	</form>
+
+	<!--iframe id="hiddenmyiframe" style="display:none;"/-->
+	<div class="ad">
+		<script src="js/ad.js"></script>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</div>
+		
+	<div style="line-height: 30px;">&nbsp;</div>
+	<div class="heading1">MvM wave generator</div>
+	<div id="allclassesicons" class="classicon" ></div>
+    <!-- This dont work
+	<div class="serverslinks">You can play custom waves on these servers:
+		<a href="steam://connect/188.165.197.181:27015">MVM #1</a> |
+		<a href="steam://connect/188.165.197.181:27016">MVM #2</a> |
+		<a href="steam://connect/188.165.197.181:27017">MVM #3</a>
+		<a href="steam://connect/188.165.197.181:27018">MVM #4</a> |
+		<a href="steam://connect/188.165.197.181:27019">MVM #5</a> |
+		<a href="steam://connect/188.165.197.181:27120">MVM #6</a> |
+		<a href="steam://connect/188.165.197.181:27122">MVM #7</a>
+	</div>
+	-->
+	<div style="line-height: 30px;">&nbsp;</div>
+	<div id="tabpanel">
+		<div id="tabscontent" ></div>
+	</div>
+
+	<div class="main">  
+		<div id="botViewerPanel">&nbsp;</div>
+		<div id="botViewerPanel2">
+			<div id="bothandler"></div>
+		</div>
+		<div id="wavehandler" astyle="display:none"></div>
+		<div id="attributesPanel">&nbsp;</div>
+		<div id="attributesPanel2">
+			<div id="attributeshandler"></div>
+		</div>   
+	</div>
+
+  	<script>
+ 		var xmlDoc = null;
+		if (typeof Help === "function") {
+			globalHelp = new Help();
+		}
+		if (typeof Contact === "function") {
+			globalContact = new Contact();
+		}
+
+        templateList = new Templates();
+
+        globalPopulation = new Population();
+  		document.getElementById("templatehandler").appendChild(templateList.div);
+  		document.getElementById("wavehandler").appendChild(globalPopulation.htmlElement);
+		var globalmissions = new Missions();    
+		var globalLoadPop = new LoadPop();
+
+		globalLoadPop.initMapList();
+
+		globalBotViewer = new BotViewer(document.getElementById("bothandler"))
+
+		globalPopulation.addFirstWave();
+
+	  	function addTemplate(name)
+	  	{
+            templateList.addTemplate(name);
+  	    }
+	  	function LoadTemplate(userDatas)
+	  	{
+   	    	globalPopulation.loadXml(xmlDoc, userDatas);
+   	    }
+	  	function LoadXML(url)
+	  	{
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", url, false);
+			xmlhttp.setRequestHeader('Content-Type', 'text/xml');
+			xmlhttp.send("");
+			if (xmlhttp.status === 200) {
+				xmlDoc = xmlhttp.responseXML;
+				return xmlDoc != null;
+			}
+			return false;
+   	    }
+	  	function LoadPopFile(fileOrText)
+	  	{
+			if (typeof File !== "undefined" && fileOrText instanceof File) {
+				var reader = new FileReader();
+				reader.onload = function() {
+					LoadPopFile(reader.result);
+				};
+				reader.onerror = function() {
+					alert("failed loading file");
+				};
+				reader.readAsText(fileOrText);
+				return;
+			}
+			if (typeof fileOrText === "string") {
+				var parsed = (typeof PopFileParser !== "undefined") ? PopFileParser.parseToXmlDoc(fileOrText) : null;
+				if (parsed) {
+					_LoadPopXmlDoc(parsed);
+					return;
+				}
+				alert("failed loading file");
+				return;
+			}
+			var fileInput = document.getElementById("popfile");
+			var fallbackFile = (fileInput && fileInput.files) ? fileInput.files[0] : null;
+			if (fallbackFile) {
+				LoadPopFile(fallbackFile);
+				return;
+			}
+			alert("failed loading file");
+	   	}
+		function bindPopFileUpload() {
+			var form = document.getElementById("sendfile");
+			var input = document.getElementById("popfile");
+			if (!form || !input) {
+				return;
+			}
+			var handler = function(event) {
+				if (event && event.preventDefault) {
+					event.preventDefault();
+				}
+				var file = input.files ? input.files[0] : null;
+				if (file) {
+					LoadPopFile(file);
+				} else {
+					alert("failed loading file");
+				}
+				return false;
+			};
+			if (typeof addEvent === "function") {
+				addEvent(form, "submit", handler, false);
+				addEvent(input, "change", handler, false);
+			} else {
+				form.addEventListener("submit", handler);
+				input.addEventListener("change", handler);
+			}
+		}
+	  	function _LoadPopFile(file)
+	  	{
+			globalPopulation.clear();
+			if (LoadXML(file)) {
+    			LoadTemplate(true);
+			}
+   	    }
+	  	function _LoadPopXmlDoc(newXmlDoc)
+	  	{
+			globalPopulation.clear();
+			xmlDoc = newXmlDoc;
+			LoadTemplate(true);
+	  	}
+	  	function LoadLastSaved()
+	  	{
+			globalPopulation.clear();
+			if (LoadXML("./popfile/getlastsaved.php")) {
+    			LoadTemplate(true);
+			}
+   	    }
+	  	function IframeLoaded()
+	  	{
+			var iframe = document.getElementById("hiddenmyiframe");
+			var response = iframe.contentDocument.childNodes[0].nodeName;
+			switch (response) {
+				case "ok":
+					LoadPopFile();
+					break;
+				case "ko":
+					alert("failed loading file");
+					break;
+				case "saveok":
+					alert(ALERT_SAVE_OK);
+					break;
+				case "saveko":
+					alert(ALERT_SAVE_KO);
+					break;
+				case "genok":
+					alert(ALERT_GEN_OK);
+					break;
+				case "genko":
+					alert(ALERT_GEN_KO);
+					break;
+				case "loadlastko":
+					alert(ALERT_LOAD_LAST_KO);
+					break;
+			}
+  	    }
+		function KeyDown(event) {
+			if (event.keyCode==112) globalHelp.setActive();
+		}
+		function KeyUp(event) {
+			if (event.keyCode==112) globalHelp.setInactive();
+		}
+
+		/*LoadXML("xml/templates.xml");
+    	LoadTemplate(true);*/
+		if (LoadXML("xml/templates.xml")) {
+    		LoadTemplate(false);
+		}
+		//LoadXML("./templates/gettemplates.php");
+    	//LoadTemplate(true);
+
+
+  		document.getElementById("missionhandler").appendChild(globalmissions.htmlElement);   
+		document.getElementById("loadpophandler").appendChild(globalLoadPop.htmlElement);
+
+		var globalAttributes = new Attributes();
+		window.onscroll = function(event){return globalAttributes.scroll(event);};
+
+		for (var i in GlobalAttributesList){
+        	var attribute = new Attribute(i);
+			globalAttributes.addAttribute(attribute);
+		}
+		document.getElementById("attributeshandler").appendChild(globalAttributes.htmlElement);
+    	window.addEventListener("keydown", KeyDown, false);
+    	window.addEventListener("keyup", KeyUp, false);
+		bindPopFileUpload();
+	</script>
+	<div class="footer">&nbsp;</div>
+	<div class="hidden">tf2 team fortress2 mann vs machine mvm custom wave generator</div>
+	<div class="copyright">
+		Team Fortress, the Team Fortress logo are trademark of <a href="http://www.valvesoftware.com/legal.html">Valve Corporation</a><br />
+		TF2 fonts & icons are copyrighted <a href="http://www.valvesoftware.com/legal.html">Valve Corporation</a>
+	</div>
+	<div class="contact"><a onclick="globalContact.show();" href="index.html#">Contact</a></div>
+	<script src="js/mvm/mvm.js"></script>
+	<iframe name="hiddenmyiframe" id="hiddenmyiframe" style="height:0px;width:0px;display:none;" onload="IframeLoaded();"></iframe>
+		<div id="sits" onclick="SteamLogin('/');">&nbsp;</div>
+	<div onclick="globalContact.show();">Contact</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+T_TFGateBot_Demoman_Normal
+{
+	Class Demoman
+
+	EventChangeAttributes
+	{
+		Default
+		{
+			BehaviorModifiers push
+			Attributes IgnoreFlag
+			Tag nav_prefer_gate1_flank
+			Tag bot_gatebot
+
+			Item "MvM GateBot Light Demoman"
+			Skill Normal
+		}
+		RevertGateBotsBehavior
+		{
+			Item "MvM GateBot Light Demoman"
+			ItemAttributes
+			{
+				ItemName "MvM GateBot Light Demoman"
+				"item style override" 1
+			}
+			Skill Normal
+		}
+	}
+}
+

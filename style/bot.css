@@ -1,0 +1,365 @@
+.TFBot
+{
+    display:inline-block;
+	vertical-align:top;
+}
+
+.TFBotViewer
+{
+    display:inline-block;
+	vertical-align:top;
+}
+
+.TFBotViewerDummy
+{
+    display:none;
+}
+
+.tfBotLarge
+{
+	max-width : 98%;
+	min-height : 15em;
+	background-color:#999999;
+    font-family: tf2build,Verdana,sans-serif;
+    display:inline-block;
+
+
+    border: 2px solid #888888;
+    /*border-radius: 1em 4em 1em 4em;*/
+    border-radius: 1em;
+    padding: 3%;
+    /*margin: 1em;*/
+	margin-bottom: 1em;
+	margin-right: 1em;
+	font-size: 1em;
+	vertical-align:top;
+}
+.tfBotSmall
+{
+	max-width : 98%;
+	background-color:#999999;
+    font-family: tf2build,Verdana,sans-serif;
+    display:inline-block;
+
+
+    border: 0px solid #888888;
+    border-radius: 2px;
+    margin: 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	font-size: 12px;
+	vertical-align:top;
+
+	height:30px;
+	width:30px;
+	margin-right:10px;
+    background-size: 30px 30px;
+	background-repeat: no-repeat;
+	display:inline-block;
+}
+
+
+.tfBotSmallSelected{
+	border: 0.5em solid #880000;
+    border-radius: 1em;    
+}
+
+.botinput
+{
+	background-color: rgba(153, 153, 153, 0.5);
+}
+
+.botheader
+{
+	position:relative;
+}
+
+.botAttribute
+{
+    display:inline-block;
+}
+
+.botAttributes
+{
+    font-family: tf2build,Verdana,sans-serif;
+}   
+
+.botRobotAttributes
+{
+    /*display:inline-block;*/
+	vertical-align:top;
+}
+
+.botRobotSubAttributes
+{
+    display:inline-block;
+	vertical-align:top;
+}
+
+.botTank{
+}
+.botOnly{
+}
+.tankOnly{
+}
+
+.botitems
+{
+}
+
+.characterattribute
+{
+}
+
+.botskill
+{
+    display:inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+	font-size: 1em;
+    cursor: pointer;
+}
+
+#botskillselected
+{
+	font-size: 1.5em;
+}
+
+.botskill0
+{
+    color: #3ADF00;
+}
+
+.botskill1
+{
+    color: #D7DF01;
+}
+
+.botskill2
+{
+    color: #DF7401;
+}
+
+.botskill3
+{
+    color: #DF0101;
+}
+
+.WeaponRestriction
+{
+    color: #CCCCCC;
+    display:inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+	font-size: 11px;
+    cursor: pointer;
+}
+
+.botBehaviour
+{
+    color: #CCCCCC;
+    display:inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+	font-size: 12px;
+    cursor: pointer;
+}
+
+#WeaponRestrictionSelected
+{
+    color: #B40404;
+}
+
+#botBehaviourSelected
+{
+    color: #B40404;
+}
+
+.removebot
+{
+    top: 5px;
+    right: 2em;
+	position:absolute;
+}
+
+.itemSelectorPanel
+{
+	position:fixed;
+
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	line-height:100%;
+	vertical-align:center;
+}
+
+.ItemSelector
+{
+	position:relative;
+
+	width:60%;
+	left:20%;
+	top:20%;
+	vertical-align:center;
+	max-height:60%;
+
+	text-align: center;
+	background-color:#CCCCFF;
+    border-radius: 1em;
+    overflow:auto;
+	z-index: 10;
+    font-family: tf2build,Verdana,sans-serif;
+}
+
+.ItemSelectorElement
+{
+    text-align: center;
+    display:inline-block;
+    width:10em;
+    overflow:hidden;         
+	font-size: 1em;
+}
+
+.ItemSelectorElementImg
+{
+    text-align: center;
+    display:inline-block;
+    width:10em;
+    height:10em;
+    background-size: 100% auto;
+    overflow:hidden;
+}
+
+.ItemSelectedElementImg
+{
+    border-radius: 1em;
+	/*background-color:#CC0000;*/
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.ItemAddElementImg
+{
+	background-size: 64px 64px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("img/add.svg");
+}
+
+.ItemRemoveElementImg
+{
+	background-size: 64px 64px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("img/remove.svg");
+}
+
+.botTemplateList
+{
+	width:15em;
+}
+
+.botClassIconList
+{
+	width:10em;
+}
+
+.classIconOption
+{
+	height:1.5em;
+	width:1.5em;
+	margin-right:1em;
+    background-size: 1.5em 1.5em;
+	background-repeat: no-repeat;
+	display:inline-block;
+
+    border: 0px solid #888888;
+    border-radius: 5px;
+}
+
+.botAttributeList
+{
+	width:12em;
+	font-size:2em;
+}
+
+.botOption{
+	width:40em;
+}
+
+.botItemBox{
+	background-color:rgba(220, 220, 220, 0.3);
+    border: 1px dashed #CCCCCC;
+    border-radius: 1em;
+	/*padding:1em;*/
+}
+
+.botCharactersAttributes{
+	display: inline-block;
+	vertical-align:center;
+  	min-height:1em;       
+  	width:20em;   
+/*	background-color:#FFFFFF;
+    border: 1px dashed #CCCCCC;
+    border-radius: 1em;*/
+}
+
+.botItemAttributesRestricted{
+	display:none;
+}
+
+.botItemsAttributesTitle{
+	position:relative;
+	top: -2em;
+}
+
+.botTankTrack{
+	width:20em;
+}
+
+.botName{
+	width:12em;
+}
+
+
+
+.botTab
+{
+    padding: 2px;
+    padding-bottom: 0px;
+    border: 2px solid #888888;
+	border-bottom-style:none;
+    display:inline-block;
+    border-radius: 5px 5px 0 0;
+	cursor: pointer;
+}    
+
+.botAddTab
+{
+    font-family: tf2build,Verdana,sans-serif;
+    background-color: #CC5555;
+	padding-left:8px;
+	padding-right:8px;
+}
+
+.botTagList{   
+	width:10em;
+	font-size:2em;
+}
+
+.botBackGround{
+    /*position: absolute;      */
+    background-size: 100% auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	filter: Alpha (opacity=30); 
+    opacity: 0.3;
+}    
+
+.botContent{
+ 	position:relative;
+	z-index:10;
+}

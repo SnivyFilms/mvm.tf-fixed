@@ -1,0 +1,30 @@
+.messageManager {
+	position:absolute;
+	height:15%;
+	width:99.9%;
+	background-color: #EEEEEE;
+	margin:0px;
+	padding:0px;
+	font-family: verdana;
+	font-size: 10pt;
+	overflow: auto;
+}
+
+.messageManagerTop {
+	top:0px;
+}
+
+.messageManagerBottom {
+	bottom:0px;
+}
+
+.messageManagerMessageLevel {
+	position:absolute;
+	top:2px;
+	right:1em;	
+}
+
+.scrollMessages{
+	overflow: auto;
+	height: 100%
+}

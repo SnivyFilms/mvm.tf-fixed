@@ -1,0 +1,358 @@
+@font-face {
+    font-family: "tf2";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/tf2.ttf"), url("fonts/tf2.eot");
+}
+
+@font-face {
+    font-family: "tf2build";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/tf2build.ttf"), url("fonts/tf2build.eot") ;
+}
+
+@font-face {
+    font-family: "tf2secondary";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/tf2secondary.ttf"), url("fonts/tf2secondary.eot");
+}
+
+body{
+	margin:0px;
+    background-color: #000000;
+    font-family: Verdana,sans-serif;
+	font-size:0.5em;
+}
+
+.textcolor
+{
+    color: #EEEEEE;
+}
+
+.hidden{
+    visibility:hidden;
+}
+
+a {
+    /*color: #2785CF;*/
+    text-decoration: none;
+}
+
+.ad
+{
+    text-align: center;
+}
+
+.mvmHeader{
+    line-height: 30em;
+}
+
+.heading1
+{
+    color: #EEEEEE;
+    font-family: tf2build,Verdana,sans-serif;
+    font-size: 55px;
+    text-align: center;
+}
+
+.heading2
+{
+    color: #EEEEEE;
+    font-family: tf2build,Verdana,sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.serverslinks
+{
+    color: #EEEEEE;
+    font-family: tf2build,Verdana,sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+.classicon
+{
+    text-align: center;
+}
+
+
+.footer
+{
+    line-height: 5em;
+}
+
+.copyright
+{
+    color: #EEEEEE;
+    font-family: Verdana,sans-serif;
+    font-size: 9px;
+    text-align: center;
+	text-decoration: none;
+}
+
+.copyright a, .copyright a:active {
+    color: #EEEEEE;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.removebutton
+{
+    background-color: rgba(255, 0, 0, 0);
+    color: #FF0000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2em;
+}
+
+.mvminput {
+    border: none;
+	border-width:1px;
+    color: #EEEEEE;
+    font-family: tf2secondary,Verdana,sans-serif;
+    font-size: 2em;
+    width: 6em;
+}
+
+#mvmNaNinput {
+    background-color: #FF0000;
+}
+
+#wavehandler {
+    text-align: center;
+	display:inline-block;
+	width:55%;
+	left:20%;
+	/*position:absolute;*/
+}
+
+#templatehandler {
+    text-align: center;
+	/*position:fixed;*/
+	left:3em;
+	top:3em;
+	vertical-align:top;
+	/*display:inline-block;*/
+	max-width:100%;
+}
+
+#missionhandler{
+	width:100%;
+}         
+
+#botViewerPanel{
+	display:inline-block;
+	width:30%;
+	vertical-align:top;
+}
+
+#botViewerPanel2{
+	position: absolute;
+	display:inline-block;
+	left:0px;
+	width:30%;
+	vertical-align:top;
+}
+
+#attributesPanel{
+	display:inline-block;
+	right:1%;
+	/*position:absolute;*/
+	width:14%;
+	vertical-align:top;
+}
+
+#attributesPanel2{
+	position:fixed;
+	display:inline-block;
+	right:0%;
+	/*position:absolute;*/
+	width:14%;
+	vertical-align:top;
+}
+
+#attributesPanel.top{
+}
+
+#attributesPanel.sliding{
+	position:fixed;
+	top:1em;
+}
+
+#attributesPanel.bottom{
+}
+
+#attributeshandler{
+	/*max-height : 70em;*/
+    /*overflow:auto;*/
+}
+
+.main {
+    text-align: center;
+	position:relative;
+}
+
+#flying {
+
+	position:fixed;
+}
+
+#sits {
+	background-image:url(img/sits_large_border.png);
+    text-align: center;
+	position:fixed;
+	right:3em;
+	top:3em;
+	width:118px;
+	height:51px;
+}
+
+#signedas {
+	background-image:url(https://mvm.tf/openid/getavatar.php);
+    text-align: center;
+	position:fixed;
+	right:3em;
+	top:3em;
+	width:32px;
+	height:32px;
+	
+    border: 2px solid #FFFFFF;
+    border-radius: 3px;
+}
+
+#selectedTab
+{
+    background-color: #838383;
+}           
+
+.activatedTab
+{
+    background-color: #838383;
+}
+
+.helpText{
+	color:white;
+	text-align: left; 
+	font-size:2em;
+}
+
+.helpPanel
+{
+	position:fixed;
+
+	/*width:100%;
+	height:100%;*/
+	/*line-height:100%;*/
+	vertical-align:center;
+	left:20%;
+	top:5%;
+	max-height:30%;
+	width:60%;
+
+	text-align: center;
+	background-color:#772222;
+	/*top:20%;*/
+    border-radius: 1em;
+    overflow:auto;
+	z-index: 10;
+    font-family: tf2build,Verdana,sans-serif;
+	padding:1em;
+	overflow:visible;
+}
+
+.helpTitle{
+	display:inline-block;
+	position:relative;
+	top:-2em;
+	background-color:#AAAAAA;
+	color:white;
+	border-radius: 4px;
+	padding:4px;
+    font-size: 2em;
+}
+
+.contactPanel
+{
+	position:fixed;
+
+	/*width:100%;
+	height:100%;*/
+	line-height:100%;
+	vertical-align:center;
+	left:30%;
+	top:20%;
+	max-height:50%;
+	width:40%;
+
+	text-align: center;
+	background-color:#000000;
+    border-radius: 1em;
+    border: 2px solid #FFFFFF;
+    overflow:auto;
+	z-index: 10;
+    font-family: tf2build,Verdana,sans-serif;
+	padding:1em;
+	overflow:visible;
+	color:white;
+}
+
+.contactText{
+	display:inline-block;
+	left:5%;
+	width:35%;
+}
+
+.contactInput{
+	width:60%;
+}
+
+.contactTitle{
+	display:inline-block;
+	position:relative;
+	/*top:-2em;*/
+	/*background-color:#AAAAAA;*/
+	border-radius: 4px;
+	padding:4px;
+    font-size: 25px;
+}
+
+
+.contactRemove
+{
+    top: 5px;
+    right: 5px;
+	position:absolute;
+}
+
+
+.contact
+{
+    color: #EEEEEE;
+    font-family: Verdana,sans-serif;
+    font-size: 9px;
+    text-align: center;
+	text-decoration: none;
+}
+
+
+.contact a, .contact a:active {
+    color: #EEEEEE;
+}       
+
+#bothandler{
+/*	position:fixed;*/ 
+    text-align: left;
+}
+
+.cashImg{
+	background-image:url(img/mvm_cash.png);
+	width:30px;                             
+	height:30px;
+	background-size: 100%;
+	display:inline-block;
+}

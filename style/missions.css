@@ -1,0 +1,31 @@
+.missions
+{
+	/*width : 100%;*/
+  	min-height:10em;
+  	min-width:20em;
+	
+	background-color:#EEEEEE;
+    font-family: tf2build,Verdana,sans-serif;
+    display:inline-block;
+
+    border: 2px solid #888888;
+    /*border-radius: 1em 4em 1em 4em;*/
+    border-radius: 1em;
+    padding: 1%;
+    margin:1%;
+    margin-top:0px;
+    text-align: left;
+	width:96%;
+}
+
+.missionsTabHandler{
+	/*margin-right:1em;*/
+	margin-top:1em;
+	margin-left:3em;
+	display:inline-block;
+	max-width:95%;
+}
+
+.missionsHeader{
+    /*font-size: 3em;*/
+}

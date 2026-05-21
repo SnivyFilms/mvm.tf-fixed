@@ -1,0 +1,38 @@
+.message {
+
+}
+
+.messageFatal {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: 900;
+	font-family: verdana;
+}
+
+.messageError {
+	background-color: #FF4444;
+	color: #FFFFFF;
+	font-weight: 700;
+	font-family: verdana;
+}
+
+.messageWarning {
+	background-color: #FFFF44;
+	color: #000000;
+	font-weight: 700;
+	font-family: verdana;
+}
+
+.messageInfo {
+	background-color: #3333FF;
+	color: #FFFFFF;
+	font-weight: 700;
+	font-family: verdana;
+}
+
+.messageDebug {
+/*	background-color: #FFFFFF;*/
+	color: #000000;
+	font-weight: 700;
+	font-family: verdana;
+}

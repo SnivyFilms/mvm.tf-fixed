@@ -407,18 +407,6 @@ function WaveSpawn(wave)
 						if (this.spawnCount=="")
 							this.setSpawnCount(attribute.nodeValue);
 			            break;
-			        case "grouptotalcount":
-						this.setTotalCount(attribute.nodeValue);
-						divide = false;
-			            break;
-			        case "groupmaxactive":
-						this.setMaxActive(attribute.nodeValue);
-						divide = false;
-			            break;
-			        case "groupspawncount":
-						this.setSpawnCount(attribute.nodeValue);
-						divide = false;
-			            break;
 			        case "waitbeforestarting":
 						this.setWaitBefore(attribute.nodeValue);
 			            break;

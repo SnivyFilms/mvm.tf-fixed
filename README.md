@@ -4,7 +4,7 @@ For a while now, the website no longer produces any .pop custom mvm missions tha
 
 mvm.tf never upadted to include the Jungle Infernal weapons either, this adds them as weapons to use.
 
-This is a work in progress project, as it stands most weapon icons and all cosmetic icons on the page doesn't load simply due to being missing.
+This is a work in progress project, as it stands some weapon reskin icons and all cosmetic icons on the page doesn't load simply due to being missing.
 
 Team Fortress, the Team Fortress logo are trademark of Valve Corporation
 TF2 fonts & icons are copyrighted Valve Corporation.

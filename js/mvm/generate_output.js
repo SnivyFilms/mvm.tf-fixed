@@ -46,6 +46,25 @@ function GeneratePopKV(population)
     return lines.join("\n");
 }
 
+function normalizeKvAttributeName(name)
+{
+    return name.replace(/_colon_/g, ":").replace(/_/g, " ");
+}
+
+function shouldQuoteKvToken(value)
+{
+    if (value === null || value === undefined) return false;
+    var str = "" + value;
+    return /\s/.test(str) || /["\\]/.test(str);
+}
+
+function formatKvToken(value)
+{
+    var str = "" + value;
+    if (!shouldQuoteKvToken(str)) return str;
+    return "\"" + str.replace(/\\/g, "\\\\").replace(/\"/g, "\\\"") + "\"";
+}
+
 function appendElementKV(node, indent, lines)
 {
     if (!node || node.nodeType !== 1) return;
@@ -69,7 +88,7 @@ function appendElementKV(node, indent, lines)
     var hasAttributes = node.attributes && node.attributes.length > 0;
 
     if (!hasElementChildren && !hasAttributes && textValue !== "") {
-        lines.push(indent + name + "\t" + textValue);
+        lines.push(indent + name + "\t" + formatKvToken(textValue));
         return;
     }
 
@@ -79,7 +98,9 @@ function appendElementKV(node, indent, lines)
     if (hasAttributes) {
         for (var a = 0; a < node.attributes.length; a++) {
             var attr = node.attributes[a];
-            lines.push(indent + "\t" + attr.name + "\t" + attr.value);
+            var attrName = formatKvToken(normalizeKvAttributeName(attr.name));
+            var attrValue = formatKvToken(attr.value);
+            lines.push(indent + "\t" + attrName + "\t" + attrValue);
         }
     }
 
@@ -90,7 +111,7 @@ function appendElementKV(node, indent, lines)
         } else if (childNode.nodeType === 3) {
             var childText = childNode.nodeValue.replace(/\s+/g, " ").trim();
             if (childText) {
-                lines.push(indent + "\t" + "Value" + "\t" + childText);
+                lines.push(indent + "\t" + "Value" + "\t" + formatKvToken(childText));
             }
         }
     }

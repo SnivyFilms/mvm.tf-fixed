@@ -318,17 +318,14 @@ function GenerateWaveSpawn(waveSpawn, parentNode)
 
 	if (waveSpawn.totalCount!=="") {
 		waveSpawnXml.setAttribute("TotalCount",  waveSpawn.totalCount*maxBots);
-		waveSpawnXml.setAttribute("GroupTotalCount",  waveSpawn.totalCount*1);
 	}
 
 	if (waveSpawn.maxActive!=="") {
 		waveSpawnXml.setAttribute("MaxActive",  waveSpawn.maxActive*maxBots);
-		waveSpawnXml.setAttribute("GroupMaxActive",  waveSpawn.maxActive*1);
 	}
 
 	if (waveSpawn.spawnCount!=="") {
 		waveSpawnXml.setAttribute("SpawnCount",  waveSpawn.spawnCount*maxBots);
-		waveSpawnXml.setAttribute("GroupSpawnCount",  waveSpawn.spawnCount*1);
 	}
 
 	//waveSpawnXml.setAttribute("Where",  waveSpawn.where);

@@ -17,17 +17,27 @@ function Attribute(attributeName)
 
 		//setName
 		Attribute.prototype.setName = function(name) {
+			// keep the raw incoming name; we'll try a few variants to find a definition
 			this.name = name;
-			var attributeName = name.replace(/_colon_/g, ":").replace(/_/g, " ");
-			var attribute = GlobalAttributesList[attributeName];
+			// first try replacing the _colon_ token only
+			var lookup = name.replace(/_colon_/g, ":");
+			var attribute = GlobalAttributesList[lookup];
+			// if not found, try converting underscores to spaces (for legacy keys)
+			if (attribute === undefined) {
+				var alt = lookup.replace(/_/g, " ");
+				attribute = GlobalAttributesList[alt];
+				if (attribute !== undefined) {
+					// use the space-based name when that's the canonical key
+					this.name = alt;
+				}
+			}
+
 			if (attribute!==undefined) {
-				//this.setDefaultValue(attribute["min_value"]);
-				//this.setValue(attribute["min_value"], true);
-				//this.warningMinValue = attribute["min_value"];
-				//this.warningMaxValue = attribute["max_value"];
 				this.effectType = attribute["effect_type"];
 				this.htmlElement.helpAddText = "<br />" + attribute["description_string"];
-				
+				this.update();
+			} else {
+				// still update the element so unknown/underscored attributes are visible
 				this.update();
 			}
 		}
@@ -77,14 +87,15 @@ function Attribute(attributeName)
 		Attribute.prototype.startDrag = function(event) {
 		    /* autoriser les drag and drop de type "copy" */
 		    event.dataTransfer.effectAllowed = 'copy';
-		    /* transmettre en donnée de drag and drop l'id de la boite
-		       déplacée */
+		    /* transmettre en donn?e de drag and drop l'id de la boite
+		       d?plac?e */
 		    event.dataTransfer.setData('Text', "attribute|" + this.name);
 		    //return false;
 		}
 		//update
 		Attribute.prototype.update = function() {
-			this.htmlText.innerHTML = this.getName().replace(/_colon_/g, ":").replace(/_/g, " ");
+			// Show the attribute name; preserve underscores for names that contain them
+			this.htmlText.innerHTML = this.getName().replace(/_colon_/g, ":");
 
 			if (this.parentBot!=null) {
 				this.htmlAttribute.style.display = '';

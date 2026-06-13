@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 		<title>TF2 Mann vs Machine wave generator</title>
 		<link rel="stylesheet" type="text/css" href="style/mvm.css" />
@@ -65,12 +65,6 @@
 		<input type="file" id="popfile" name="popfile"/>
      	<input type="submit" value="Load pop file" />
 	</form>
-
-	<!--iframe id="hiddenmyiframe" style="display:none;"/-->
-	<div class="ad">
-		<script src="js/ad.js"></script>
-		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-	</div>
 		
 	<div style="line-height: 30px;">&nbsp;</div>
 	<div class="heading1">MvM wave generator</div>
@@ -251,10 +245,10 @@
 			}
   	    }
 		function KeyDown(event) {
-			if (event.keyCode==112) globalHelp.setActive();
+			if (event.keyCode===112) globalHelp.setActive();
 		}
 		function KeyUp(event) {
-			if (event.keyCode==112) globalHelp.setInactive();
+			if (event.keyCode===112) globalHelp.setInactive();
 		}
 
 		/*LoadXML("xml/templates.xml");
@@ -284,12 +278,12 @@
 	<div class="footer">&nbsp;</div>
 	<div class="hidden">tf2 team fortress2 mann vs machine mvm custom wave generator</div>
 	<div class="copyright">
-		Team Fortress, the Team Fortress logo are trademark of <a href="http://www.valvesoftware.com/legal.html">Valve Corporation</a><br />
-		TF2 fonts & icons are copyrighted <a href="http://www.valvesoftware.com/legal.html">Valve Corporation</a>
+		Team Fortress, the Team Fortress logo are trademark of <a href="https://www.valvesoftware.com/legal.html">Valve Corporation</a><br />
+		TF2 fonts & icons are copyrighted <a href="https://www.valvesoftware.com/legal.html">Valve Corporation</a>
 	</div>
 	<div class="contact"><a onclick="globalContact.show();" href="index.html#">Contact</a></div>
 	<script src="js/mvm/mvm.js"></script>
-	<iframe name="hiddenmyiframe" id="hiddenmyiframe" style="height:0px;width:0px;display:none;" onload="IframeLoaded();"></iframe>
+	<iframe name="hiddenmyiframe" id="hiddenmyiframe" style="height:0;width:0;display:none;" onload="IframeLoaded();"></iframe>
 		<div id="sits" onclick="SteamLogin('/');">&nbsp;</div>
 	<div onclick="globalContact.show();">Contact</div>
 </body>

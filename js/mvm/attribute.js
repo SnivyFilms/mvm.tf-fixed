@@ -23,14 +23,14 @@ function Attribute(attributeName)
 			var lookup = name.replace(/_colon_/g, ":");
 			var attribute = GlobalAttributesList[lookup];
 			// if not found, try converting underscores to spaces (for legacy keys)
-			if (attribute === undefined) {
-				var alt = lookup.replace(/_/g, " ");
-				attribute = GlobalAttributesList[alt];
-				if (attribute !== undefined) {
+			//if (attribute === undefined) {
+			//	var alt = lookup.replace(/_/g, " ");
+			//	attribute = GlobalAttributesList[alt];
+			//	if (attribute !== undefined) {
 					// use the space-based name when that's the canonical key
-					this.name = alt;
-				}
-			}
+			//		this.name = alt;
+			//	}
+			//}
 
 			if (attribute!==undefined) {
 				this.effectType = attribute["effect_type"];

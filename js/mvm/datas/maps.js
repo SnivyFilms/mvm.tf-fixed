@@ -111,8 +111,8 @@ MapList["mvm_sewer_invasion_event_b7"] = MAP_SEWER_INVASION_EVENT;
 MapList["mvm_skullcove"] = MAP_SKULLCOVE;
 MapList["mvm_swirl_rc7"] = MAP_SWIRL;
 MapList["mvm_swirl_event_rc8a"] = MAP_SWIRL_EVENT;
-MapList["mvm_trainyard_rc9"] = MAP_TRAINYARD;
 MapList["mvm_teien_rc6"] = MAP_TEIEN;
+MapList["mvm_trainyard_rc9"] = MAP_TRAINYARD;
 
 MAP_DECOY.addPopulation("Doe's Drill", "mvm_decoy.xml");
 MAP_DECOY.addPopulation("Disk Deletion", "mvm_decoy_advanced.xml");

@@ -170,10 +170,12 @@ function Population(url)
 	    // setMapName
 		Population.prototype.setMapName = function(mapName) {
 			if (this.mapName == mapName) return;
-			if (mapName == "mvm_coaltown_event" ) {
+			if (mapName == "mvm_ghostown" ) {
 				this.setZombieBots(true);
 			}
-			if (mapName == "mvm_mannworks" || mapName == "mvm_coaltown_event" )
+			// show reset-bomb option for maps that support a start-wave output which can reset the bomb
+			// Only show the Reset Bomb UI when the map defines a bomb-reset start output
+			if (MapList[mapName] && MapList[mapName].startWaveOutputBombReset && MapList[mapName].startWaveOutputBombReset != "")
 				this.htmlResetBombDiv.style.display = "";
 			else
 				this.htmlResetBombDiv.style.display = "none";

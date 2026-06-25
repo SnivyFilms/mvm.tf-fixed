@@ -127,8 +127,8 @@ TabBar.prototype.updateTabs = function() {
 
 //dragEnter
 TabBar.prototype.dragEnter = function(event) {
-    /* éviter le comportement par défaut du navigateur (déplacement
-       de sélection) */
+    /* ï¿½viter le comportement par dï¿½faut du navigateur (dï¿½placement
+       de sï¿½lection) */
 	var TabId = event.dataTransfer.getData("text");
 //	$("MessageManager").addMessage(new Message("TabBar dragEnter " + TabId, MessageManager.DEBUG));
 	//logMessage(new Message("TabBar dragEnter " + TabId, MessageManager.DEBUG));

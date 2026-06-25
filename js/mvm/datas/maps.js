@@ -63,7 +63,7 @@ MAP_ISOLATION.addTankPaths("tank_path_a_1 tank_path_b_1");
 MAP_SKULLCOVE.addTankPaths("tank_path_left tank_path_right");
 MAP_ROTTENBURG.addTankPaths("tank_path_a_10 tank_path_b_10");
 MAP_TRAINYARD.addTankPaths("tank_path_LL_1 tank_path_LU_1 tank_path_RL_1 tank_path_RU_1");
-MAP_TEIEN.addTankPaths("boss_path_a1 tank_path_b1");
+MAP_TEIEN.addTankPaths("boss_path_a1 boss_path_b1");
 MAP_SWIRL.addTankPaths("path_tank_upper path_tank_lower path_tank_default path_tank_reverse");
 MAP_SWIRL_EVENT.addTankPaths("path_tank_upper path_tank_lower path_tank_default path_tank_reverse");
 MAP_SEWER_INVASION.addTankPaths("tank_path_a_1");

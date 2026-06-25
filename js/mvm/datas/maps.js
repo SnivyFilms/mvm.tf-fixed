@@ -4,7 +4,7 @@ var MAP_COALTOWN = new Map("mvm_coaltown");
 var MAP_GHOSTOWN = new Map("mvm_ghostown");
 var MAP_MANNWORKS = new Map("mvm_mannworks");
 var MAP_BIGROCK = new Map("mvm_bigrock");
-var MAP_ISOLATION = new Map("mvm_isolation_b4");
+var MAP_ISOLATION = new Map("mvm_isolation_rc3");
 var MAP_SKULLCOVE = new Map("mvm_skullcove");
 var MAP_MANNHATTAN = new Map("mvm_mannhattan");
 var MAP_ROTTENBURG = new Map("mvm_rottenburg");
@@ -104,7 +104,7 @@ MapList["mvm_mannworks"] = MAP_MANNWORKS;
 MapList["mvm_rottenburg"] = MAP_ROTTENBURG;
 //Community Maps
 MapList["mvm_facade_b3"] = MAP_FACADE;
-MapList["mvm_isolation_b4"] = MAP_ISOLATION;
+MapList["mvm_isolation_rc3"] = MAP_ISOLATION;
 MapList["mvm_powerplant_rc4"] = MAP_POWERPLANT;
 MapList["mvm_sewer_invasion_b7"] = MAP_SEWER_INVASION;
 MapList["mvm_sewer_invasion_event_b7"] = MAP_SEWER_INVASION_EVENT;

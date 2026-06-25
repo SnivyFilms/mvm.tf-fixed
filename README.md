@@ -10,3 +10,9 @@ Team Fortress, the Team Fortress logo are trademark of Valve Corporation
 TF2 fonts & icons are copyrighted Valve Corporation.
 
 While I couldn't find any information on who owns mvm.tf, credits to them for the original website.
+
+Non-Valve mvm map credits:
+mvm_isolation made by E-Arkham, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=512476725), [TF2Maps](https://tf2maps.net/downloads/isolation.701/)
+mvm_skullcove made by Alias, [Steam Workshop](https://steamcommunity.com//sharedfiles/filedetails/?id=455168490), [TF2Maps](https://tf2maps.net/downloads/skullcove.206/)
+mvm_trainyard made 42, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1160890619), [TF2Maps](https://tf2maps.net/downloads/trainyard.1572/)
+mvm_teien made by Freyja, [TF2Maps](https://tf2maps.net/downloads/teien.4023/)

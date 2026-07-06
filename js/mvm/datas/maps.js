@@ -17,7 +17,12 @@ var MAP_SEWER_INVASION_EVENT = new Map("mvm_sewer_invasion_event_b7");
 var MAP_POWERPLANT = new Map("mvm_powerplant_rc4");
 var MAP_RANCHER = new Map("mvm_rancher_b17");
 var MAP_FACADE = new Map("mvm_facade_b3");
+var MAP_POSTAL = new Map("mvm_postal_rc1b");
+var MAP_CYBERIA = new Map("mvm_cyberia_rc6a");
+var MAP_SHARP = new Map("mvm_sharp_rc6");
+var MAP_CROWN = new Map("mvm_crown_rc4b");
 
+// Add Robot Spawns
 MAP_NO_MAP_SET.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy")
 MAP_DECOY.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_invasion spawnbot_right spawnbot_left spawnbot_single_flag");
 MAP_COALTOWN.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy spawnbot_giant");
@@ -37,7 +42,12 @@ MAP_SEWER_INVASION_EVENT.addSpawns("spawnbot spawnbot_left spawnbot_right spawnb
 MAP_POWERPLANT.addSpawns("spawnbot spawnbot_right spawmbot_single_flag spawnbot_giant spawnbot_main0 spawnbot_main0_squad spawnbot_main1 spawnbot_main2 spawnbot_middle spawnbot_giant spawnbot_invasion spawnbot_main1_slow spawnbot_left spawnbot_upper0 spawnbot_upper1 spawnbot_upper2 flankers spawnbot_mission_spy spawnbot_mission_sentrybuster spawnbot_mission_sentry_buster spawnbot_mission_sniper spawnbot_mission_sniper0 spawnbot_mission_sniper1");
 MAP_RANCHER.addSpawns("spawnbot_main spawnbot_left spawnbot_center spawnbot_right spawnbot_chief");
 MAP_FACADE.addSpawns("spawnbot spawnbot_giant spawnbot_left spawnbot_right spawnbot_mission_sentrybuster spawnbot_mission_sniper spawnbot_mission_spy");
+MAP_POSTAL.addSpawns("spawnbot_invasion spawnbot_left spawnbot_right spawnbot_carrier spawnbot_carrier_special spawnbot_mission_sentrybuster spawnbot_mission_sniper spawnbot_mission_spy");
+MAP_CYBERIA.addSpawns("spawnbot spawnbot_secondary spawnbot_tertiary spawnbot_main spawnbot_invasion spawnbot_mission_spy spawnbot_mission_sniper spawnbot_mission_sniper_tertiary spawnbot_mission_sentrybuster");
+MAP_SHARP.addSpawns("spawnbot spawnbot_secondary spawnbot_main spawnbot_mission_spy spawnbot_mission_sniper");
+MAP_CROWN.addSpawns("spawnbot_main_0 spawnbot_left_0 spawnbot_flank_0 spawnbot_all_0 spawnbot_tank_0 spawnbot_main_1 spawnbot_flank_1 spawnbot_left_1 spawnbot_all_1 spawnbot_tank_1");
 
+// Add Robot Tags
 MAP_DECOY.addTags("nav_prefer_flank_right nav_prefer_flank_left");
 MAP_COALTOWN.addTags("nav_prefer_flank_right nav_prefer_flank_left special_main_right special_main_left");
 MAP_GHOSTOWN.addTags("nav_prefer_flank_right nav_prefer_flank_left special_main_right special_main_left");
@@ -52,7 +62,10 @@ MAP_SWIRL.addTags("nav_prefer_gate1_flank");
 MAP_SWIRL_EVENT.addTags("nav_prefer_gate1_flank");
 MAP_POWERPLANT.addTags("common bomb_carrier nav_prefer_right nav_prefer_flank_right nav_prefer_left nav_prefer_flank_left nav_prefer_final_flank_right nav_prefer_final_alt nav_prefer_final_main");
 MAP_FACADE.addTags("flankers bot_teletank");
+MAP_POSTAL.addTags("anti_flank");
+MAP_CROWN.addTags("nav_prefer_gate1_flank nav_prefer_flank_after_gate");
 
+// Add Tank Paths
 MAP_NO_MAP_SET.addTankPaths("boss_path_1");
 MAP_DECOY.addTankPaths("boss_path_1");
 MAP_COALTOWN.addTankPaths("boss_path_1");
@@ -71,7 +84,12 @@ MAP_SEWER_INVASION_EVENT.addTankPaths("tank_path_a_1");
 MAP_POWERPLANT.addTankPaths("boss_path_1");
 MAP_RANCHER.addTankPaths("path_tank_left path_tank_right tank_start_harvester");
 MAP_FACADE.addTankPaths("boss_path_1 boss_path_a_1");
+MAP_POSTAL.addTankPaths("boss_path_1 boss2_path_1 boss_path_1b boss2_path_1");
+MAP_CYBERIA.addTankPaths("tank_path_a_1 tank_path_b_1");
+MAP_SHARP.addTankPaths("tank_path_a_1 tank_path_b_1");
+MAP_CROWN.addTankPaths("tank_path_1");
 
+// Add Start/Done Outputs
 MAP_NO_MAP_SET.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
 MAP_DECOY.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
 MAP_COALTOWN.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
@@ -91,10 +109,15 @@ MAP_SEWER_INVASION_EVENT.setStartWaveOutput("wave_start_relay").setDoneOutput("w
 MAP_POWERPLANT.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
 MAP_RANCHER.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_relay_timer", true).setDoneOutput("wave_finish_relay");
 MAP_FACADE.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finish_relay");
+MAP_POSTAL.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_endurance_relay", true).setDoneOutput("wave_finished_relay");
+MAP_CYBERIA.setStartWaveOutput("wave_start_relay")/*.setStartWaveOutput("wave_start_relay_2bomb").setStartWaveOutput("wave_start_relay_3bomb")*/.setStartWaveOutput("wave_start_relay_1timedbomb", true)/*.setStartWaveOutput("wave_start_relay_2timedbomb", true).setStartWaveOutput("wave_start_relay_3timedbomb", true).setStartWaveOutput("wave_start_relay_allbomb")*/.setDoneOutput("wave_finished_relay");
+MAP_SHARP.setStartWaveOutput("wave_start_relay")/*.setStartWaveOutput("wave_start_relay_2bomb").setStartWaveOutput("wave_start_relay_3bomb")*/.setStartWaveOutput("wave_start_relay_1timedbomb", true)/*.setStartWaveOutput("wave_start_relay_2timedbomb", true).setStartWaveOutput("wave_start_relay_3timedbomb", true)*/.setDoneOutput("wave_finished_relay");
+MAP_CROWN.setStartWaveOutput("wave_start_relay_notimer").setStartWaveOutput("wave_start_relay", true).setDoneOutput("wave_finished_relay");
 
 //This shows on the website. Sorted by alphabetical order.
 //Official Maps
 MapList[""] = MAP_NO_MAP_SET;
+MapList["//Official Maps"] = MAP_NO_MAP_SET;
 MapList["mvm_bigrock"] = MAP_BIGROCK;
 MapList["mvm_coaltown"] = MAP_COALTOWN;
 MapList["mvm_decoy"] = MAP_DECOY;
@@ -103,11 +126,16 @@ MapList["mvm_mannhattan"] = MAP_MANNHATTAN;
 MapList["mvm_mannworks"] = MAP_MANNWORKS;
 MapList["mvm_rottenburg"] = MAP_ROTTENBURG;
 //Community Maps
+MapList["//Community Maps"] = MAP_NO_MAP_SET;
+MapList["mvm_crown_rc4b"] = MAP_CROWN;
+MapList["mvm_cyberia_rc6a"] = MAP_CYBERIA;
 MapList["mvm_facade_b3"] = MAP_FACADE;
 MapList["mvm_isolation_rc3"] = MAP_ISOLATION;
+MapList["mvm_postal_rc1b"] = MAP_POSTAL;
 MapList["mvm_powerplant_rc4"] = MAP_POWERPLANT;
 MapList["mvm_sewer_invasion_b7"] = MAP_SEWER_INVASION;
 MapList["mvm_sewer_invasion_event_b7"] = MAP_SEWER_INVASION_EVENT;
+MapList["mvm_sharp_rc6"] = MAP_SHARP;
 MapList["mvm_skullcove"] = MAP_SKULLCOVE;
 MapList["mvm_swirl_rc7"] = MAP_SWIRL;
 MapList["mvm_swirl_event_rc8a"] = MAP_SWIRL_EVENT;

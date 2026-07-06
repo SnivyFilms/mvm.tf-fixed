@@ -42,7 +42,7 @@ Map.prototype.setDoneOutput = function(target) {
  * @param {Boolean} bombreset Set if the target output resets the bomb.
  * @return this
  */
-Map.prototype.setStartWaveOutput = function(target, bombreset)
+Map.prototype.setStartWaveOutput = function(target, bombreset = false)
 {
 	if (bombreset) {
 		this.startWaveOutputBombReset = target;

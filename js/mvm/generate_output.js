@@ -22,7 +22,7 @@ function GenerateXML(population)
 
     GenerateTemplates(pop, false, true);
     GenerateMissions(pop);
-    GenerateWaves(population.waves, pop, population.resetBomb);
+    GenerateWaves(population.waves, pop, population.mapName, population.resetBomb);
 
     var s = new XMLSerializer();
     var str = s.serializeToString(xmlDoc);

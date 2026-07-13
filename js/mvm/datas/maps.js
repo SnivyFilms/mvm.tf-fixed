@@ -110,8 +110,8 @@ MAP_POWERPLANT.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finish
 MAP_RANCHER.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_relay_timer", true).setDoneOutput("wave_finish_relay");
 MAP_FACADE.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finish_relay");
 MAP_POSTAL.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_endurance_relay", true).setDoneOutput("wave_finished_relay");
-MAP_CYBERIA.setStartWaveOutput("wave_start_relay")/*.setStartWaveOutput("wave_start_relay_2bomb").setStartWaveOutput("wave_start_relay_3bomb")*/.setStartWaveOutput("wave_start_relay_1timedbomb", true)/*.setStartWaveOutput("wave_start_relay_2timedbomb", true).setStartWaveOutput("wave_start_relay_3timedbomb", true).setStartWaveOutput("wave_start_relay_allbomb")*/.setDoneOutput("wave_finished_relay");
-MAP_SHARP.setStartWaveOutput("wave_start_relay")/*.setStartWaveOutput("wave_start_relay_2bomb").setStartWaveOutput("wave_start_relay_3bomb")*/.setStartWaveOutput("wave_start_relay_1timedbomb", true)/*.setStartWaveOutput("wave_start_relay_2timedbomb", true).setStartWaveOutput("wave_start_relay_3timedbomb", true)*/.setDoneOutput("wave_finished_relay");
+MAP_CYBERIA.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_relay_2bomb").setStartWaveOutput("wave_start_relay_3bomb").setStartWaveOutput("wave_start_relay_1timedbomb", true).setStartWaveOutput("wave_start_relay_2timedbomb", true).setStartWaveOutput("wave_start_relay_3timedbomb", true).setStartWaveOutput("wave_start_relay_allbomb").setDoneOutput("wave_finished_relay");
+MAP_SHARP.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_relay_2bomb").setStartWaveOutput("wave_start_relay_3bomb").setStartWaveOutput("wave_start_relay_1timedbomb", true).setStartWaveOutput("wave_start_relay_2timedbomb", true).setStartWaveOutput("wave_start_relay_3timedbomb", true).setDoneOutput("wave_finished_relay");
 MAP_CROWN.setStartWaveOutput("wave_start_relay_notimer").setStartWaveOutput("wave_start_relay", true).setDoneOutput("wave_finished_relay");
 
 //This shows on the website. Sorted by alphabetical order.

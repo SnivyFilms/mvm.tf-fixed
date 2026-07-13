@@ -125,6 +125,39 @@ function Population(url)
 				this.htmlResetBomb.checked =  resetBomb;
 			}
 		}
+
+		// setWaveOutputDropdown - for maps with multiple outputs
+		Population.prototype.setWaveOutputDropdown = function(value) {
+		    this.resetBomb = value; // Store the actual relay name
+		    if (this.htmlWaveOutputDropdown) {
+		    	this.htmlWaveOutputDropdown.value = value;
+		    }
+		}
+
+		// updateWaveOutputDropdown - populate dropdown with available options
+		Population.prototype.updateWaveOutputDropdown = function(mapName) {
+			if (!this.htmlWaveOutputDropdown) return;
+
+			var map = MapList[mapName];
+			if (!map || !map.getStartWaveOutputOptions) return;
+
+			// Clear existing options
+			this.htmlWaveOutputDropdown.innerHTML = '';
+
+			var options = map.getStartWaveOutputOptions();
+			for (var i = 0; i < options.length; i++) {
+				var option = document.createElement('option');
+				option.value = options[i];
+				option.innerHTML = options[i];
+				this.htmlWaveOutputDropdown.appendChild(option);
+			}
+
+			// Set first option as selected
+			if (options.length > 0) {
+				this.htmlWaveOutputDropdown.value = options[0];
+				this.resetBomb = options[0];
+			}
+		}
 	    // addWave
 		Population.prototype.addWave = function(setCurrent) {
 			var wave = new Wave();
@@ -173,12 +206,29 @@ function Population(url)
 			if (mapName == "mvm_ghostown" ) {
 				this.setZombieBots(true);
 			}
-			// show reset-bomb option for maps that support a start-wave output which can reset the bomb
-			// Only show the Reset Bomb UI when the map defines a bomb-reset start output
-			if (MapList[mapName] && MapList[mapName].startWaveOutputBombReset && MapList[mapName].startWaveOutputBombReset != "")
-				this.htmlResetBombDiv.style.display = "";
-			else
+
+			// Check the map and its available wave output options
+			var map = MapList[mapName];
+			var numOptions = (map && map.getStartWaveOutputOptions) ? map.getStartWaveOutputOptions().length : 0;
+
+			if (numOptions > 2) {
+				// Show dropdown for multiple options
 				this.htmlResetBombDiv.style.display = "none";
+				this.htmlWaveOutputDropdownDiv.style.display = "";
+				this.updateWaveOutputDropdown(mapName);
+				// Set to first option by default
+				this.setWaveOutputDropdown(map.startWaveOutput);
+			} else if (numOptions == 2) {
+				// Show checkbox for exactly 2 options (backward compatible)
+				this.htmlResetBombDiv.style.display = "";
+				this.htmlWaveOutputDropdownDiv.style.display = "none";
+				this.resetBomb = false; // Reset to first option
+			} else {
+				// Hide both for other cases
+				this.htmlResetBombDiv.style.display = "none";
+				this.htmlWaveOutputDropdownDiv.style.display = "none";
+			}
+
 			this.mapName = mapName;
 
 			for (var i =0; i< this.htmlMapList.options.length; i++) {
@@ -291,6 +341,15 @@ function Population(url)
 				this.htmlResetBombDiv.appendChild(document.createTextNode(POPULATION_RESET_BOMB));
 				this.htmlResetBomb.type = "checkbox";
 				addEvent(this.htmlResetBomb, "change", function() {this.ownerObject.setResetBomb(this.checked);}, false);
+			}
+			
+			//Wave Output Dropdown (for maps with multiple options)
+			{
+				this.htmlWaveOutputDropdownDiv = this.createElement("div", div, "populationWaveOutputDropdown", null, "help_population_wave_output");
+				this.htmlWaveOutputDropdownDiv.appendChild(document.createTextNode("Wave Start Output: "));
+				this.htmlWaveOutputDropdown = this.createElement("select", this.htmlWaveOutputDropdownDiv, "mvminput populationDropDown");
+				addEvent(this.htmlWaveOutputDropdown, "change", function() {this.ownerObject.setWaveOutputDropdown(this.value);}, false);
+				this.htmlWaveOutputDropdownDiv.style.display = "none"; // Hidden by default
 			}
 
 			//dl button

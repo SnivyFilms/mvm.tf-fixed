@@ -14,8 +14,9 @@ function Map(name, displayName)
 	this.tags = new Array();
 	this.tankPaths = new Array();
 	this.populations = [];
-	this.startWaveOutput = "";
-	this.startWaveOutputBombReset = "";
+	this.startWaveOutput = ""; // Default (first) option
+	this.startWaveOutputOptions = []; // All available options
+	this.startWaveOutputBombReset = ""; // Old school system
 	this.doneOutput = "";
 	this.firstSpawnOutput = "";
 	this.hasPopulations = false;
@@ -44,10 +45,17 @@ Map.prototype.setDoneOutput = function(target) {
  */
 Map.prototype.setStartWaveOutput = function(target, bombreset = false)
 {
+	// Store all options
+	this.startWaveOutputOptions.push(target);
+
+	// First call (non-resetting) becomes the default
+	if (this.startWaveOutput === "") {
+		this.startWaveOutput = target;
+	}
+
+	// Keep backward compatibility
 	if (bombreset) {
 		this.startWaveOutputBombReset = target;
-	} else {
-		this.startWaveOutput = target;
 	}
 	return this;
 };
@@ -148,13 +156,19 @@ Map.prototype.getName = function() {
 
 /**
  * Return start wave output.
- * @param {Boolean} bombreset Get the target output which resets the bomb.
- * @return this
+ * @param {Boolean|String} bombreset Get the target output - boolean for old style, string (relay name) for new dropdown style.
+ * @return {String} The target output
  */
 Map.prototype.getStartWaveOutput = function(bombreset)
 {
+	// New style: bombreset is the actual relay name from dropdown
+	if (typeof bombreset === 'string' && bombreset !== '') {
+		return bombreset;
+	}
+
+	// Old style: boolean backward compatibility
 	if (bombreset) {
-		if (this.startWaveOutputBombReset=="") {
+		if (this.startWaveOutputBombReset === "") {
 			return this.startWaveOutput;
 		} else {
 			return this.startWaveOutputBombReset;
@@ -162,6 +176,14 @@ Map.prototype.getStartWaveOutput = function(bombreset)
 	} else {
 		return this.startWaveOutput;
 	}
+};
+
+/**
+ * Get all available start wave output options.
+ * @return {Array} Array of option names
+ */
+Map.prototype.getStartWaveOutputOptions = function() {
+	return this.startWaveOutputOptions;
 };
 
 /**

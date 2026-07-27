@@ -6,6 +6,7 @@ var HelpList =
 	//"help_wave_tabs":"Squads",
 	"help_wave_add_squad":new Array("Wave", "Add squad to wave."),
 	"help_wave_attributes":new Array("Wave", "Wave attributes"),
+	"help_wave_start_output":new Array("Wave start output", "Choose the relay target for this wave."),
 
 	"help_item_selector":new Array("Item selector", "Select an item."),
 	//"help_selector_element":"help_selector_element",
@@ -67,7 +68,8 @@ var HelpList =
 	"help_population_bot_attack":new Array("Bot attack", "Check this to allow bot attack while invulnerable in their spawn rooms."),
 	"help_population_advanced":new Array("Advanced", "Advanced mission. Used for achievements."),
 	"help_population_map_name":new Array("Map name", "Map name. Choose a map to get map specific spawns, bot navigation and tank starting point."),
-	"help_population_reset_bomb":new Array("Reset bomb", "Only on mannworks. The bomb will return at the bot spawn if lying on the ground for some time."),
+	"help_population_reset_bomb":new Array("Default wave start output", "Default relay target used when a new wave is added, or when a wave does not override its relay target."),
+	"help_population_wave_output":new Array("Default wave start output", "Default relay target used when a new wave is added, or when a wave does not override its relay target."),
 	"help_population_generate":new Array("Generate", "Download the pop file for this population. This will also save the population."),
 	"help_population_test":new Array("Test", "Generate the pop file for testing on our server. You must connect to our server after that to start the mission."),
 	"help_population_randomize":new Array("Randomize", "Randomize the population. This will wipe off all."),

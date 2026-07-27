@@ -22,13 +22,14 @@ var POPULATION_ADVANCED = "Advanced mission";
 var POPULATION_FIXED_RESPAWN_TIME = "Fixed respawn time";
 var POPULATION_ZOMBIE_BOTS = "Zombie bots";
 var POPULATION_MAP_NAME = "Map : ";
-var POPULATION_RESET_BOMB = "Resettable Bomb";
+var POPULATION_RESET_BOMB = "Default wave start output";
 
 //Wave
 var WAVE = "Wave";
 var WAVE_ADD_WAVE_SPAWN = "Add squad";
 var WAVE_DESCRIPTION = "Description : ";
 var WAVE_SOUND = "Sound : ";
+var WAVE_START_OUTPUT = "Wave start output: ";
 
 
 //Wave spawn

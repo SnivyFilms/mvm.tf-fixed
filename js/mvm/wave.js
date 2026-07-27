@@ -9,7 +9,8 @@ function Wave()
 	this.wavespawns = new Array();
 	this.waveDescription = "";
 	this.waveStartingSound = "";
-	
+	this.startWaveOutput = "";
+
 ////////
     if (typeof Wave.initialized == "undefined")
 	{
@@ -86,6 +87,7 @@ function Wave()
 		};
 		//updateMapName
 		Wave.prototype.updateMapName = function(mapName) {
+			this.updateStartWaveOutputDropdown(mapName);
 			for (var i in this.wavespawns) {
 				this.wavespawns[i].updateMapName(mapName);
 			}
@@ -112,6 +114,9 @@ function Wave()
 			    var lowernodename = attribute.nodeName.toLowerCase();
 
 			    switch (lowernodename){
+					case "startwaveoutput":
+						this.setStartWaveOutput(attribute.nodeValue);
+						break;
 			        case "waitwhendone":
 						this.waitwhendone = attribute.nodeValue;
 			            break;
@@ -132,6 +137,18 @@ function Wave()
 			    var child = node.childNodes[i];
 			    var lowernodename = child.nodeName.toLowerCase();
 			    switch (lowernodename){
+					case "startwaveoutput":
+						for (var j=0; j<child.attributes.length; j++) {
+							var childAttribute = child.attributes[j];
+							if (childAttribute.nodeName.toLowerCase() === "target") {
+								this.setStartWaveOutput(childAttribute.nodeValue);
+								break;
+							}
+						}
+						if (this.startWaveOutput === "" && child.textContent) {
+							this.setStartWaveOutput(child.textContent);
+						}
+						break;
 			        case "wavespawn":
 						var wavespawn = this.addWaveSpawn(true);
 						wavespawn.loadXml(child);
@@ -242,6 +259,14 @@ function Wave()
 			addEvent(this.inputStartingSound, "change", function() {this.ownerObject.setStartingSound(this.value);}, false);
 		}
 
+		{//wave start output
+			this.htmlStartWaveOutputDiv = this.createElement("div", attributes, null, null, "help_wave_start_output");
+			this.htmlStartWaveOutputDiv.appendChild(document.createTextNode(WAVE_START_OUTPUT));
+			this.htmlStartWaveOutput = this.createElement("select", this.htmlStartWaveOutputDiv, "mvminput populationDropDown waveDropDown");
+			addEvent(this.htmlStartWaveOutput, "change", function() {this.ownerObject.setStartWaveOutput(this.value);}, false);
+			this.htmlStartWaveOutputDiv.style.display = "none";
+		}
+
 
 
 
@@ -302,6 +327,60 @@ Wave.prototype.setStartingSound = function(startingSound) {
 	}
 }
 
+/**
+ * Set the wave start output.
+ * @param {String} startWaveOutput Relay target.
+ */
+Wave.prototype.setStartWaveOutput = function(startWaveOutput) {
+	if (typeof startWaveOutput !== "string") {
+		startWaveOutput = "";
+	}
+	this.startWaveOutput = startWaveOutput;
+	if (this.htmlStartWaveOutput && this.htmlStartWaveOutput.value != startWaveOutput) {
+		this.htmlStartWaveOutput.value = startWaveOutput;
+	}
+}
+
+/**
+ * Update the wave start output dropdown for the current map.
+ * @param {String} mapName Map name.
+ */
+Wave.prototype.updateStartWaveOutputDropdown = function(mapName) {
+	if (!this.htmlStartWaveOutput || !this.htmlStartWaveOutputDiv) return;
+
+	var map = MapList[mapName];
+	var options = (map && map.getStartWaveOutputOptions) ? map.getStartWaveOutputOptions() : [];
+	this.htmlStartWaveOutput.innerHTML = "";
+
+	if (options.length <= 1) {
+		this.htmlStartWaveOutputDiv.style.display = "none";
+		if (options.length === 1 && this.startWaveOutput !== options[0]) {
+			this.startWaveOutput = options[0];
+		}
+		return;
+	}
+
+	this.htmlStartWaveOutputDiv.style.display = "";
+	var selectedValue = this.startWaveOutput;
+	var selectedExists = false;
+
+	for (var i = 0; i < options.length; i++) {
+		var option = document.createElement("option");
+		option.value = options[i];
+		option.innerHTML = options[i];
+		this.htmlStartWaveOutput.appendChild(option);
+		if (options[i] === selectedValue) {
+			selectedExists = true;
+		}
+	}
+
+	if (!selectedExists) {
+		selectedValue = options[0];
+		this.startWaveOutput = selectedValue;
+	}
+	this.htmlStartWaveOutput.value = selectedValue;
+}
+
 //////////GETTERS
 
 /**
@@ -318,6 +397,25 @@ Wave.prototype.getDescription = function() {
  */
 Wave.prototype.getStartingSound = function() {
 	return this.waveStartingSound;
+}
+
+/**
+ * Get the wave start output.
+ * @param {String} mapName Map name.
+ * @param {Boolean|String} fallback Default relay target.
+ * @return {String} Relay target.
+ */
+Wave.prototype.getStartWaveOutput = function(mapName, fallback) {
+	if (this.startWaveOutput !== "") {
+		return this.startWaveOutput;
+	}
+	if (MapList[mapName]) {
+		return MapList[mapName].getStartWaveOutput(fallback);
+	}
+	if (typeof fallback === "string") {
+		return fallback;
+	}
+	return "";
 }
 
 /**

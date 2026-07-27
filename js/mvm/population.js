@@ -166,6 +166,12 @@ function Population(url)
 		        this.waves.push(wave);
 				this.tabBar.addTab(wave.waveTab);
 
+				var map = MapList[this.mapName];
+				if (map && map.getStartWaveOutput) {
+					wave.setStartWaveOutput(map.getStartWaveOutput(this.resetBomb));
+				}
+				wave.updateMapName(this.mapName);
+
 				wave.waveTab.activate();
 				this.wavehandler.appendChild(wave.div);
 				wave.setNumber(this.waves.length);
@@ -346,7 +352,7 @@ function Population(url)
 			//Wave Output Dropdown (for maps with multiple options)
 			{
 				this.htmlWaveOutputDropdownDiv = this.createElement("div", div, "populationWaveOutputDropdown", null, "help_population_wave_output");
-				this.htmlWaveOutputDropdownDiv.appendChild(document.createTextNode("Wave Start Output: "));
+				this.htmlWaveOutputDropdownDiv.appendChild(document.createTextNode(POPULATION_RESET_BOMB + ": "));
 				this.htmlWaveOutputDropdown = this.createElement("select", this.htmlWaveOutputDropdownDiv, "mvminput populationDropDown");
 				addEvent(this.htmlWaveOutputDropdown, "change", function() {this.ownerObject.setWaveOutputDropdown(this.value);}, false);
 				this.htmlWaveOutputDropdownDiv.style.display = "none"; // Hidden by default

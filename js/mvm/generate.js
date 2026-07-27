@@ -386,7 +386,8 @@ function GenerateWaveSpawn(waveSpawn, parentNode)
 function GenerateWaves(waves, parentNode, map, resetBomb)
 {
 	var xmlDoc = parentNode.ownerDocument;
-	
+	var mapObject = MapList[map];
+
 	for (var i in waves)
 	{
 	    var waveXml = xmlDoc.createElement("Wave");
@@ -403,12 +404,15 @@ function GenerateWaves(waves, parentNode, map, resetBomb)
 		var StartWaveOutput = xmlDoc.createElement("StartWaveOutput");
 		var DoneOutput = xmlDoc.createElement("DoneOutput");
 
-		if (MapList[map]) {
-			StartWaveOutput.setAttribute("Target",  MapList[map].getStartWaveOutput(resetBomb));
-			StartWaveOutput.setAttribute("Action",  "Trigger");
-			waveXml.appendChild(StartWaveOutput);
+		if (mapObject) {
+			var startWaveOutputTarget = wave.getStartWaveOutput(map, resetBomb);
+			if (startWaveOutputTarget !== "") {
+				StartWaveOutput.setAttribute("Target",  startWaveOutputTarget);
+				StartWaveOutput.setAttribute("Action",  "Trigger");
+				waveXml.appendChild(StartWaveOutput);
+			}
 
-			DoneOutput.setAttribute("Target",  MapList[map].getDoneOutput());
+			DoneOutput.setAttribute("Target",  mapObject.getDoneOutput());
 			DoneOutput.setAttribute("Action",  "Trigger");
 			waveXml.appendChild(DoneOutput);
 		}

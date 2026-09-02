@@ -12,6 +12,8 @@ TF2 fonts & icons are copyrighted Valve Corporation.
 While I couldn't find any information on who owns mvm.tf, credits to them for the original website.
 
 Non-Valve mvm map credits:
+- mvm_barren made by Dayal, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1214043578), [TF2Maps](https://tf2maps.net/downloads/mvm-barren.4056/).
+- mvm_comstock made by Cass, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3551074933), [TF2Maps](https://tf2maps.net/downloads/mvm-comstock.19517/), [GameBanana](https://gamebanana.com/mods/614466).
 - mvm_crown made by Startacker!, [TF2Maps](https://tf2maps.net/downloads/crown.10589/).
 - mvm_cyberia made by dexc34, [TF2Maps](https://tf2maps.net/downloads/cyberia.7604/).
 - mvm_facade made by MegapiemanPHD, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3555602427), [TF2Maps](https://tf2maps.net/downloads/facade.19368/).
@@ -23,7 +25,8 @@ Non-Valve mvm map credits:
 - mvm_sharp made by dexc34, [TF2Maps](https://tf2maps.net/downloads/sharp.8553/).
 - mvm_skullcove made by Alias, [Steam Workshop](https://steamcommunity.com//sharedfiles/filedetails/?id=455168490), [TF2Maps](https://tf2maps.net/downloads/skullcove.206/).
 - mvm_swirl made by Asd417, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3549659438), [TF2Maps](https://tf2maps.net/downloads/swirl.8913/), Halloween Versions: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3549659899), [TF2Maps](https://tf2maps.net/downloads/swirl-event.13168/).
-- mvm_trainyard made by 42, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1160890619), [TF2Maps](https://tf2maps.net/downloads/trainyard.1572/).
 - mvm_teien made by Freyja, [TF2Maps](https://tf2maps.net/downloads/teien.4023/).
+- mvm_tensai made by Dayal, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1905568880), [TF2Maps](https://tf2maps.net/downloads/tensai.8673/).
+- mvm_trainyard made by 42, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1160890619), [TF2Maps](https://tf2maps.net/downloads/trainyard.1572/).
 
 Please note that these maps may have extra relays that cannot be set here, please consider checking the original map page(s) for more information on the map and its relays.

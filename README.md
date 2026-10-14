@@ -23,6 +23,7 @@ Non-Valve mvm map credits:
 - mvm_rancher made by Asd417, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3549660571), [TF2Maps](https://tf2maps.net/downloads/rancher.15592/).
 - mvm_sewer_invasion and Halloween Version made by s0da72, [TF2Maps](https://tf2maps.net/downloads/sewer-invasion.894/) (Both are in the same download).
 - mvm_sharp made by dexc34, [TF2Maps](https://tf2maps.net/downloads/sharp.8553/).
+- mvm_starcoast made by Scatter, [TF2Maps](https://tf2maps.net/downloads/starcoast.19234/).
 - mvm_skullcove made by Alias, [Steam Workshop](https://steamcommunity.com//sharedfiles/filedetails/?id=455168490), [TF2Maps](https://tf2maps.net/downloads/skullcove.206/).
 - mvm_swirl made by Asd417, [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3549659438), [TF2Maps](https://tf2maps.net/downloads/swirl.8913/), Halloween Versions: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3549659899), [TF2Maps](https://tf2maps.net/downloads/swirl-event.13168/).
 - mvm_teien made by Freyja, [TF2Maps](https://tf2maps.net/downloads/teien.4023/).

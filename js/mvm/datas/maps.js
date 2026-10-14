@@ -24,6 +24,7 @@ var MAP_CROWN = new Map("mvm_crown_rc4b");
 var MAP_BARREN = new Map("mvm_barren_rc6b");
 var MAP_TENSAI = new Map("mvm_tensai_rc6a");
 var MAP_COMSTOCK = new Map("mvm_comstock_rc1b");
+var MAP_STARCOAST = new Map("mvm_starcoast_b5b");
 
 // Add Robot Spawns
 MAP_NO_MAP_SET.addSpawns("spawnbot spawnbot_mission_sniper spawnbot_mission_spy")
@@ -52,6 +53,7 @@ MAP_CROWN.addSpawns("spawnbot_main_0 spawnbot_left_0 spawnbot_flank_0 spawnbot_a
 MAP_BARREN.addSpawns("spawnbot spawnbot_flank spawnbot_train spawnbot_sides invasion");
 MAP_TENSAI.addSpawns("spawnbot_lower spawnbot_left spawnbot_right spawnbot_center spawnbot_upper spawnbot_invasion");
 MAP_COMSTOCK.addSpawns("spawnbot spawnbot_left spawnbot_right spawnbot_center");
+MAP_STARCOAST.addSpawns("spawnbot_random spawnbot_island spawnbot_ocean spawnbot_ocean_shallow spawnbot_ocean_deep spawnbot_pier spawnbot_pier_flank_shallow spawnbot_pier_flank_deep");
 
 // Add Robot Tags
 MAP_DECOY.addTags("nav_prefer_flank_right nav_prefer_flank_left");
@@ -72,6 +74,7 @@ MAP_POSTAL.addTags("anti_flank");
 MAP_CROWN.addTags("nav_prefer_gate1_flank nav_prefer_flank_after_gate");
 MAP_BARREN.addTags("flank");
 MAP_COMSTOCK.addTags("quakebot homing_rockets jank_rockets jank_rockets_random bomber_rockets grenade_fart death_pipespewer gravity_rockets nuke_rockets nav_prefer_gate1_flank");
+MAP_STARCOAST.addTags("nav_prefer_flank");
 
 // Add Tank Paths
 MAP_NO_MAP_SET.addTankPaths("boss_path_1");
@@ -99,6 +102,7 @@ MAP_CROWN.addTankPaths("tank_path_1");
 MAP_BARREN.addTankPaths("tank_path_1");
 MAP_TENSAI.addTankPaths("tank_path_1 blimp_path_1 blimp_path_2_1");
 MAP_COMSTOCK.addTankPaths("tank_gate_path_start tank_path_start");
+MAP_STARCOAST.addTankPaths("tank_path_left tank_path_right");
 
 // Add Start/Done Outputs
 MAP_NO_MAP_SET.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
@@ -127,6 +131,7 @@ MAP_CROWN.setStartWaveOutput("wave_start_relay_notimer").setStartWaveOutput("wav
 MAP_BARREN.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_relay_ironman", true).setStartWaveOutput("wave_start_relay_multi", true).setDoneOutput("wave_finished_relay");
 MAP_TENSAI.setStartWaveOutput("wave_start_relay_classic").setStartWaveOutput("wave_start_relay_ironman", true).setStartWaveOutput("wave_start_relay_multi", true).setStartWaveOutput("wave_start_relay_boss").setStartWaveOutput("wave_start_relay_boss_multi", true).setDoneOutput("wave_finish_relay");
 MAP_COMSTOCK.setStartWaveOutput("wave_start_relay").setStartWaveOutput("wave_start_double_relay", true).setStartWaveOutput("wave_start_ironman_relay", true).setDoneOutput("wave_finished_relay");
+MAP_STARCOAST.setStartWaveOutput("wave_start_relay").setDoneOutput("wave_finished_relay");
 
 //This shows on the website. Sorted by alphabetical order.
 //Official Maps
@@ -153,6 +158,7 @@ MapList["mvm_sewer_invasion_b7"] = MAP_SEWER_INVASION;
 MapList["mvm_sewer_invasion_event_b7"] = MAP_SEWER_INVASION_EVENT;
 MapList["mvm_sharp_rc6"] = MAP_SHARP;
 MapList["mvm_skullcove"] = MAP_SKULLCOVE;
+MapList["mvm_starcoast_b5b"] = MAP_STARCOAST;
 MapList["mvm_swirl_rc7"] = MAP_SWIRL;
 MapList["mvm_swirl_event_rc8a"] = MAP_SWIRL_EVENT;
 MapList["mvm_teien_rc6"] = MAP_TEIEN;

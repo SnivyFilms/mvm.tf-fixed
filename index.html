@@ -155,7 +155,7 @@
 			}
 			if (typeof fileOrText === "string") {
 				var parsed = (typeof PopFileParser !== "undefined") ? PopFileParser.parseToXmlDoc(fileOrText) : null;
-				if (parsed) {
+				if (parsed && parsed.getElementsByTagName("Wave").length > 0) {
 					_LoadPopXmlDoc(parsed);
 					return;
 				}
@@ -281,10 +281,10 @@
 		Team Fortress, the Team Fortress logo are trademark of <a href="https://www.valvesoftware.com/legal.html">Valve Corporation</a><br />
 		TF2 fonts & icons are copyrighted <a href="https://www.valvesoftware.com/legal.html">Valve Corporation</a>
 	</div>
-	<div class="contact"><a onclick="globalContact.show();" href="index.html#">Contact</a></div>
+	<div class="contact"><a href="https://github.com/SnivyFilms/mvm.tf-fixed/issues">Contact</a></div>
 	<script src="js/mvm/mvm.js"></script>
 	<iframe name="hiddenmyiframe" id="hiddenmyiframe" style="height:0;width:0;display:none;" onload="IframeLoaded();"></iframe>
 		<div id="sits" onclick="SteamLogin('/');">&nbsp;</div>
-	<div onclick="globalContact.show();">Contact</div>
+	<div><a href="https://github.com/SnivyFilms/mvm.tf-fixed/issues">Contact</a></div>
 </body>
 </html>

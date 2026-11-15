@@ -71,7 +71,7 @@ function Bot(templateName, isUserTemplate)
 				div.item = w;
 				if (w!= null) {
 					itemDiv.innerHTML = w.itemName;
-					div.style.backgroundImage = 'url("img/' + w.image + '.png")';
+					div.style.backgroundImage = 'url("style/img/' + w.image + '.png")';
 				}
 				else {
 	   				addClassName(div, "ItemRemoveElementImg");
@@ -1443,7 +1443,6 @@ Bot.prototype.create = function() {
 
 	this.hideSmall();
 }
-
 
 
 

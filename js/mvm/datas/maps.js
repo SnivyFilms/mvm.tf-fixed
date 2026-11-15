@@ -165,37 +165,38 @@ MapList["mvm_teien_rc6"] = MAP_TEIEN;
 MapList["mvm_tensai_rc6a"] = MAP_TENSAI;
 MapList["mvm_trainyard_rc9"] = MAP_TRAINYARD;
 
-MAP_DECOY.addPopulation("Doe's Drill", "mvm_decoy.xml");
-MAP_DECOY.addPopulation("Disk Deletion", "mvm_decoy_advanced.xml");
-MAP_DECOY.addPopulation("Data Demolition", "mvm_decoy_advanced2.xml");
-MAP_DECOY.addPopulation("Disintegration", "mvm_decoy_advanced3.xml");
-MAP_DECOY.addPopulation("Doe's Doom", "mvm_decoy_intermediate.xml");
-MAP_DECOY.addPopulation("Day of Wreckening", "mvm_decoy_intermediate2.xml");
-MAP_DECOY.addPopulation("Desperation", "mvm_decoy_expert1.xml");
+MAP_DECOY.addPopulation("Doe's Drill", "mvm_decoy.pop");
+MAP_DECOY.addPopulation("Disk Deletion", "mvm_decoy_advanced.pop");
+MAP_DECOY.addPopulation("Data Demolition", "mvm_decoy_advanced2.pop");
+MAP_DECOY.addPopulation("Disintegration", "mvm_decoy_advanced3.pop");
+MAP_DECOY.addPopulation("Doe's Doom", "mvm_decoy_intermediate.pop");
+MAP_DECOY.addPopulation("Day of Wreckening", "mvm_decoy_intermediate2.pop");
+MAP_DECOY.addPopulation("Desperation", "mvm_decoy_expert1.pop");
 
-MAP_COALTOWN.addPopulation("Crash Course", "mvm_coaltown.xml");
-MAP_COALTOWN.addPopulation("Ctrl+Alt+Destruction", "mvm_coaltown_advanced.xml");
-MAP_COALTOWN.addPopulation("CPU Slaughter", "mvm_coaltown_advanced2.xml");
-MAP_COALTOWN.addPopulation("Cave-in", "mvm_coaltown_intermediate.xml");
-MAP_COALTOWN.addPopulation("Quarry", "mvm_coaltown_intermediate2.xml");
-MAP_COALTOWN.addPopulation("Cataclysm", "mvm_coaltown_expert1.xml");
-MAP_GHOST_TOWN.addPopulation("Caliginous Caper", "mvm_ghost_town.xml");
+MAP_COALTOWN.addPopulation("Crash Course", "mvm_coaltown.pop");
+MAP_COALTOWN.addPopulation("Ctrl+Alt+Destruction", "mvm_coaltown_advanced.pop");
+MAP_COALTOWN.addPopulation("CPU Slaughter", "mvm_coaltown_advanced2.pop");
+MAP_COALTOWN.addPopulation("Cave-in", "mvm_coaltown_intermediate.pop");
+MAP_COALTOWN.addPopulation("Quarry", "mvm_coaltown_intermediate2.pop");
+MAP_COALTOWN.addPopulation("Cataclysm", "mvm_coaltown_expert1.pop");
+MAP_GHOST_TOWN.addPopulation("Caliginous Caper", "mvm_ghost_town.pop");
+MAP_GHOST_TOWN.addPopulation("Wave 666", "mvm_ghost_town_666.pop");
 
-MAP_MANNWORKS.addPopulation("Mann-euvers", "mvm_mannworks.xml");
-MAP_MANNWORKS.addPopulation("Machine Massacre", "mvm_mannworks_advanced.xml");
-MAP_MANNWORKS.addPopulation("Mech Mutilation", "mvm_mannworks_ironman.xml");
-MAP_MANNWORKS.addPopulation("Mean Machines", "mvm_mannworks_intermediate.xml");
-MAP_MANNWORKS.addPopulation("Mann Hunt", "mvm_mannworks_intermediate2.xml");
-MAP_MANNWORKS.addPopulation("Mannslaughter", "mvm_mannworks_expert1.xml");
+MAP_MANNWORKS.addPopulation("Mann-euvers", "mvm_mannworks.pop");
+MAP_MANNWORKS.addPopulation("Machine Massacre", "mvm_mannworks_advanced.pop");
+MAP_MANNWORKS.addPopulation("Mech Mutilation", "mvm_mannworks_ironman.pop");
+MAP_MANNWORKS.addPopulation("Mean Machines", "mvm_mannworks_intermediate.pop");
+MAP_MANNWORKS.addPopulation("Mann Hunt", "mvm_mannworks_intermediate2.pop");
+MAP_MANNWORKS.addPopulation("Mannslaughter", "mvm_mannworks_expert1.pop");
 
-MAP_BIGROCK.addPopulation("Benign infiltration", "mvm_bigrock.xml");
-MAP_BIGROCK.addPopulation("Broken parts", "mvm_bigrock_advanced1.xml");
-MAP_BIGROCK.addPopulation("Bone shaker", "mvm_bigrock_advanced2.xml");
+MAP_BIGROCK.addPopulation("Benign infiltration", "mvm_bigrock.pop");
+MAP_BIGROCK.addPopulation("Broken parts", "mvm_bigrock_advanced1.pop");
+MAP_BIGROCK.addPopulation("Bone shaker", "mvm_bigrock_advanced2.pop");
 
-MAP_ROTTENBURG.addPopulation("Village Vanguard", "mvm_rottenburg.xml");
-MAP_ROTTENBURG.addPopulation("Hamlet Hostility", "mvm_rottenburg_advanced1.xml");
-MAP_ROTTENBURG.addPopulation("Bavarian Botbash", "mvm_rottenburg_advanced2.xml");
+MAP_ROTTENBURG.addPopulation("Village Vanguard", "mvm_rottenburg.pop");
+MAP_ROTTENBURG.addPopulation("Hamlet Hostility", "mvm_rottenburg_advanced1.pop");
+MAP_ROTTENBURG.addPopulation("Bavarian Botbash", "mvm_rottenburg_advanced2.pop");
 
-MAP_MANNHATTAN.addPopulation("Big Apple Barricade", "mvm_mannhattan.xml");
-MAP_MANNHATTAN.addPopulation("Empire Escalation", "mvm_mannhattan_advanced1.xml");
-MAP_MANNHATTAN.addPopulation("Metro Malice", "mvm_mannhattan_advanced2.xml");
+MAP_MANNHATTAN.addPopulation("Big Apple Barricade", "mvm_mannhattan.pop");
+MAP_MANNHATTAN.addPopulation("Empire Escalation", "mvm_mannhattan_advanced1.pop");
+MAP_MANNHATTAN.addPopulation("Metro Malice", "mvm_mannhattan_advanced2.pop");

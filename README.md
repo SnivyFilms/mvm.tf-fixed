@@ -1,3 +1,6 @@
+> [!TIP]
+> You can access the latest push at https://snivyfilms.github.io/mvm.tf-fixed/
+
 This is a source code downloaded and rebuild of https://mvm.tf/. Which as of making this readme is still up and available to use.
 
 For a while now, the website no longer produces any .pop custom mvm missions that has a map defined. This isnt ideal, especially on the maps that were provided that has multiple tank paths.

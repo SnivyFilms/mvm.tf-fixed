@@ -1026,7 +1026,7 @@ BotViewer.prototype.updateItems = function() {
 		var weapon = bot.getItem(slot);
 		if (weapon!=null) {
 			removeClassName(this.weaponSlot[slot], "ItemAddElementImg");
-			this.weaponSlot[slot].style.backgroundImage = 'url("img/' + weapon.image + '.png")';
+			this.weaponSlot[slot].style.backgroundImage = 'url("style/img/' + weapon.image + '.png")';
 		} else {
 			this.weaponSlot[slot].style.backgroundImage = 'url("../style/img/add.svg")';
 			this.weaponSlot[slot].style.backgroundImage = '';

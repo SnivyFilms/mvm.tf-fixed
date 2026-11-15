@@ -1,4 +1,4 @@
-var BASE_OFFICIAL_FILES = "./xml/";
+var BASE_OFFICIAL_FILES = "./js/mvm/datas/missions/";
 
 function LoadPop()
 {
@@ -75,7 +75,19 @@ LoadPop.prototype.addPopulation= function(mapName, population) {
 
 //loadPopulation
 LoadPop.prototype.loadPopulation = function(popXml) {
-	_LoadPopFile(BASE_OFFICIAL_FILES + popXml);
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", BASE_OFFICIAL_FILES + popXml, true);
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState !== 4) {
+			return;
+		}
+		if (xmlhttp.status === 200) {
+			LoadPopFile(xmlhttp.responseText);
+		} else {
+			alert("failed loading official mission");
+		}
+	};
+	xmlhttp.send("");
 };
 
 LoadPop.prototype.showPopulations= function(mapName) {

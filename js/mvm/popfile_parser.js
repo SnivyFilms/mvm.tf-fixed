@@ -162,7 +162,8 @@ function keyValuesToXmlDocument(rootItems) {
 	var populationNode = null;
 	for (var i = 0; i < rootItems.length; i++) {
 		var item = rootItems[i];
-		if (Array.isArray(item.value) && item.key.toLowerCase() === "population") {
+		if (Array.isArray(item.value) &&
+			(item.key.toLowerCase() === "population" || item.key.toLowerCase() === "waveschedule")) {
 			populationNode = item;
 			break;
 		}
@@ -219,4 +220,3 @@ var PopFileParser = {
 		return keyValuesToXmlDocument(keyValues);
 	}
 };
-

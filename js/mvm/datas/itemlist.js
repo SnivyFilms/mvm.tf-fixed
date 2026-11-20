@@ -3470,10 +3470,8 @@ itemList.addItem(0, 1, "TF_WEAPON_PISTOL_SCOUT", "style/vpk/icons/923624116821ee
 itemList.addItem(7, 1, "TF_WEAPON_REVOLVER", "style/vpk/icons/4a10438ab28f470e2818b852ec3ab19f84dc7a81.png", "TF_WEAPON_REVOLVER");
 itemList.addItem(8, 1, "TF_WEAPON_PDA_ENGINEER_BUILD", "style/vpk/icons/4e2e3ad67e88ce78703aadbdfe537523445d35f1.png", "TF_WEAPON_PDA_ENGINEER_BUILD");
 itemList.addItem(8, 1, "TF_WEAPON_PDA_ENGINEER_DESTROY", "style/vpk/icons/008fa23ac6be0cb7e07d9d052752b2259cccdf3e.png", "TF_WEAPON_PDA_ENGINEER_DESTROY");
-itemList.addItem(7, 1, "TF_WEAPON_PDA_SPY", "style/vpk/icons/6d1b59384b83936180a4c4c077a2ddd8940ca41d.png", "TF_WEAPON_PDA_SPY");
 itemList.addItem(8, 1, "TF_WEAPON_BUILDER", "style/vpk/icons/008fa23ac6be0cb7e07d9d052752b2259cccdf3e.png", "TF_WEAPON_BUILDER");
 itemList.addItem(5, 1, "TF_WEAPON_MEDIGUN", "style/vpk/icons/f6c31f58cdc3976223354dc42acfd639be263fa6.png", "TF_WEAPON_MEDIGUN");
-itemList.addItem(7, 1, "TF_WEAPON_INVIS", "style/vpk/icons/282c181bb54ba398d72aa97887eaaf156c2cbf0e.png", "TF_WEAPON_INVIS");
 itemList.addItem(5, 1, "The Kritzkrieg", "style/vpk/icons/af5422ca16c3957622f977b0194c23872f13b375.png", "The Kritzkrieg");
 itemList.addItem(5, 0, "The Blutsauger", "style/vpk/icons/c65aaa5ffd9be2fb8d8f6912e5a173a2bd81fdd0.png", "The Blutsauger");
 itemList.addItem(5, 2, "The Ubersaw", "style/vpk/icons/19d175ac5d820098dc407bb52ffc0b7402369c22.png", "The Ubersaw");
@@ -3498,8 +3496,6 @@ itemList.addItem(7, 3, "Fancy Fedora", "style/vpk/icons/e7d32b555e200dd1a432121a
 itemList.addItem(6, 0, "The Huntsman", "style/vpk/icons/918ccaddeb1f374b583d7585e9ecd87228f7c0a2.png", "The Huntsman");
 itemList.addItem(6, 1, "The Razorback", "style/vpk/icons/0ce7cfdce85d56552bc91e9c498bbc35d828a6dc.png", "The Razorback");
 itemList.addItem(6, 1, "Jarate", "style/vpk/icons/2ed33077ba30991290c9e2efc004d1b0a4001bb5.png", "Jarate");
-itemList.addItem(7, 1, "The Dead Ringer", "style/vpk/icons/8ae97df088816ee0070f4fb535596bef3160d743.png", "The Dead Ringer");
-itemList.addItem(7, 1, "The Cloak and Dagger", "style/vpk/icons/b556793314914d7e1303a0db77be90c97f83cf95.png", "The Cloak and Dagger");
 itemList.addItem(7, 1, "The Ambassador", "style/vpk/icons/d9a9ac9a4686b710c0c105d7c7904ceeeae9bf8e.png", "The Ambassador");
 itemList.addItem(8, 3, "Texas Ten Gallon", "style/vpk/icons/b5c1a81f4f03ee9b7acdb09229a174d70a915b3f.png", "Texas Ten Gallon");
 itemList.addItem(8, 3, "Engineer's Cap", "style/vpk/icons/d645c708ed6ee1290c662216823999114f1b4119.png", "Engineer's Cap");
@@ -3708,7 +3704,6 @@ itemList.addItem(8, 1, "Upgradeable TF_WEAPON_PISTOL", "style/vpk/icons/92362411
 itemList.addItem(0, 1, "Upgradeable TF_WEAPON_PISTOL", "style/vpk/icons/923624116821eef076c241e6e6b9fba2af27e6d2.png", "Upgradeable TF_WEAPON_PISTOL");
 itemList.addItem(7, 1, "Upgradeable TF_WEAPON_REVOLVER", "style/vpk/icons/4a10438ab28f470e2818b852ec3ab19f84dc7a81.png", "Upgradeable TF_WEAPON_REVOLVER");
 itemList.addItem(5, 1, "Upgradeable TF_WEAPON_MEDIGUN", "style/vpk/icons/f6c31f58cdc3976223354dc42acfd639be263fa6.png", "Upgradeable TF_WEAPON_MEDIGUN");
-itemList.addItem(7, 1, "Upgradeable TF_WEAPON_INVIS", "style/vpk/icons/282c181bb54ba398d72aa97887eaaf156c2cbf0e.png", "Upgradeable TF_WEAPON_INVIS");
 itemList.addItem(2, 3, "The Attendant", "style/vpk/icons/fa4281ccaafc074f39dc059bdec57502483bf9a5.png", "The Attendant");
 itemList.addItem(2, 2, "The Powerjack", "style/vpk/icons/2397369469111facdf59c74e9f5270666ab18e69.png", "The Powerjack");
 itemList.addItem(2, 0, "The Degreaser", "style/vpk/icons/4384a9111e234aade5894a8b8d0b5697150dcfca.png", "The Degreaser");
@@ -4024,7 +4019,6 @@ itemList.addItem(4, 3, "Poker Visor", "style/vpk/icons/4bed994edcb1f1b65717454e3
 itemList.addItem(0, 1, "TTG Max Pistol - Poker Night", "style/vpk/icons/00f6ade8c54dc7c9122726e48f35a818bd5f4a58.png", "TTG Max Pistol - Poker Night");
 itemList.addItem(8, 1, "TTG Max Pistol - Poker Night", "style/vpk/icons/00f6ade8c54dc7c9122726e48f35a818bd5f4a58.png", "TTG Max Pistol - Poker Night");
 itemList.addItem(3, 3, "TTG Glasses", "style/vpk/icons/85868decc7c6ed5f1d31498f528ffcb22ac3f8b2.png", "TTG Glasses");
-itemList.addItem(7, 1, "TTG Watch", "style/vpk/icons/af20d6a0f9d66f4068cc874bb81a030918dd96c3.png", "TTG Watch");
 itemList.addItem(4, 0, "Iron Curtain", "style/vpk/icons/9aaf447eb87ea392aafe243294f4d71cb3f53420.png", "Iron Curtain");
 itemList.addItem(0, 3, "Portal 2 Pin", "style/vpk/icons/a4579ec630188cdf3a51869295903fe775080ed9.png", "Portal 2 Pin");
 itemList.addItem(6, 3, "Portal 2 Pin", "style/vpk/icons/a4579ec630188cdf3a51869295903fe775080ed9.png", "Portal 2 Pin");
@@ -4902,8 +4896,6 @@ itemList.addItem(6, 3, "The Teufort Tooth Kicker", "style/vpk/icons/d2ac64520766
 itemList.addItem(3, 3, "The Teufort Tooth Kicker", "style/vpk/icons/d2ac6452076697f5065751452ddbb3cef8d201c2.png", "The Teufort Tooth Kicker");
 itemList.addItem(1, 3, "The Teufort Tooth Kicker", "style/vpk/icons/d2ac6452076697f5065751452ddbb3cef8d201c2.png", "The Teufort Tooth Kicker");
 itemList.addItem(8, 3, "The Teufort Tooth Kicker", "style/vpk/icons/d2ac6452076697f5065751452ddbb3cef8d201c2.png", "The Teufort Tooth Kicker");
-itemList.addItem(7, 1, "TF_WEAPON_BUILDER_SPY", "style/vpk/icons/585805396668f61d95896a6cc402c37333ec39fa.png", "TF_WEAPON_BUILDER_SPY");
-itemList.addItem(7, 1, "Upgradeable TF_WEAPON_BUILDER_SPY", "style/vpk/icons/585805396668f61d95896a6cc402c37333ec39fa.png", "Upgradeable TF_WEAPON_BUILDER_SPY");
 itemList.addItem(8, 1, "Upgradeable TF_WEAPON_PDA_ENGINEER_BUILD", "style/vpk/icons/4e2e3ad67e88ce78703aadbdfe537523445d35f1.png", "Upgradeable TF_WEAPON_PDA_ENGINEER_BUILD");
 itemList.addItem(0, 3, "Pet Balloonicorn", "style/vpk/icons/38db3e4be0fcebf1ebd9b712bcad46ecdbd01299.png", "Pet Balloonicorn");
 itemList.addItem(6, 3, "Pet Balloonicorn", "style/vpk/icons/38db3e4be0fcebf1ebd9b712bcad46ecdbd01299.png", "Pet Balloonicorn");
@@ -5048,7 +5040,6 @@ itemList.addItem(3, 1, "Gold Botkiller Stickybomb Launcher Mk.I", "style/vpk/ico
 itemList.addItem(2, 0, "Gold Botkiller Flame Thrower Mk.I", "style/vpk/icons/aa15431f959ebcb1580faf72f01754f1bcddfc92.png", "Gold Botkiller Flame Thrower Mk.I");
 itemList.addItem(0, 0, "Gold Botkiller Scattergun Mk.I", "style/vpk/icons/9a1ff5e4fea7fb3e45bba1fcdad9532579e7df1b.png", "Gold Botkiller Scattergun Mk.I");
 itemList.addItem(1, 0, "Gold Botkiller Rocket Launcher Mk.I", "style/vpk/icons/29152098b58ecacd718e8218f3b3f66b6ceb0200.png", "Gold Botkiller Rocket Launcher Mk.I");
-itemList.addItem(7, 1, "The Red-Tape Recorder", "style/vpk/icons/33b1e13dba5d35853ac660829aa55a4b3850a22f.png", "The Red-Tape Recorder");
 itemList.addItem(4, 0, "The Huo Long Heatmaker", "style/vpk/icons/ec9b29459c7c56fc16343f98c7da0661069212b8.png", "The Huo Long Heatmaker");
 itemList.addItem(0, 1, "The Flying Guillotine", "style/vpk/icons/39917f23fa4d03af06d69a2e8df57cd751708e50.png", "The Flying Guillotine");
 itemList.addItem(2, 2, "The Neon Annihilator", "style/vpk/icons/63f611a98529340772b9be414bad41983dbdd546.png", "The Neon Annihilator");
@@ -5090,7 +5081,6 @@ itemList.addItem(0, 3, "The Track Terrorizer", "style/vpk/icons/a500febfc196fc7a
 itemList.addItem(5, 3, "Archimedes", "style/vpk/icons/69b99742bc0dbfdab2af7670f16d28c22dbf9d5e.png", "Archimedes");
 itemList.addItem(1, 3, "The War Pig", "style/vpk/icons/b8cdb80b1caf5bc15740e120f30ac851dd7f9e8a.png", "The War Pig");
 itemList.addItem(3, 3, "The Bearded Bombardier", "style/vpk/icons/4ba8a9438597ba08926894710cc1e95f409b51d9.png", "The Bearded Bombardier");
-itemList.addItem(7, 1, "Promo Red-Tape Recorder", "style/vpk/icons/33b1e13dba5d35853ac660829aa55a4b3850a22f.png", "Promo Red-Tape Recorder");
 itemList.addItem(4, 0, "Promo Huo Long Heatmaker", "style/vpk/icons/ec9b29459c7c56fc16343f98c7da0661069212b8.png", "Promo Huo Long Heatmaker");
 itemList.addItem(0, 1, "Promo Flying Guillotine", "style/vpk/icons/39917f23fa4d03af06d69a2e8df57cd751708e50.png", "Promo Flying Guillotine");
 itemList.addItem(2, 2, "Promo Neon Annihilator", "style/vpk/icons/63f611a98529340772b9be414bad41983dbdd546.png", "Promo Neon Annihilator");
@@ -5287,7 +5277,6 @@ itemList.addItem(2, 3, "Portal 2 Soundtrack Promo Package", "style/vpk/icons/774
 itemList.addItem(4, 3, "The Grand Duchess Tutu", "style/vpk/icons/6feb0d5b16a9843bc5500c8dc5440080761ff18a.png", "The Grand Duchess Tutu");
 itemList.addItem(4, 3, "The Grand Duchess Fairy Wings", "style/vpk/icons/025cfe587d674fcea22e770ae24bc9ff9dc3a062.png", "The Grand Duchess Fairy Wings");
 itemList.addItem(4, 3, "The Grand Duchess Tiara", "style/vpk/icons/1bbd17eb3ca6366a27f5e3254dd05d99c0e50337.png", "The Grand Duchess Tiara");
-itemList.addItem(7, 1, "The Ap-Sap", "style/vpk/icons/9eebf09a03d6b6a2dd1a25ec4a2732ade45eea0a.png", "The Ap-Sap");
 itemList.addItem(0, 3, "The Dead Little Buddy", "style/vpk/icons/29f30ac10fc83d9c5e44202c442bb08c277ce074.png", "The Dead Little Buddy");
 itemList.addItem(6, 3, "The Dead Little Buddy", "style/vpk/icons/29f30ac10fc83d9c5e44202c442bb08c277ce074.png", "The Dead Little Buddy");
 itemList.addItem(1, 3, "The Dead Little Buddy", "style/vpk/icons/29f30ac10fc83d9c5e44202c442bb08c277ce074.png", "The Dead Little Buddy");
@@ -5349,7 +5338,6 @@ itemList.addItem(8, 3, "That '70s Chapeau", "style/vpk/icons/aba69d3226f6333fb58
 itemList.addItem(2, 3, "That '70s Chapeau", "style/vpk/icons/aba69d3226f6333fb5822aa574b2f3535dd058fa.png", "That '70s Chapeau");
 itemList.addItem(1, 3, "The Chief Constable", "style/vpk/icons/f38bf7d55314e1a6da3f4f82aefaf4aa71f60499.png", "The Chief Constable");
 itemList.addItem(4, 3, "The Siberian Sophisticate", "style/vpk/icons/063b8277406260e7a6ab5be733280c55effffcee.png", "The Siberian Sophisticate");
-itemList.addItem(7, 1, "The Quackenbirdt", "style/vpk/icons/bd700e04efd2cabb5ef51d32731b5964e720fb7a.png", "The Quackenbirdt");
 itemList.addItem(6, 3, "The Deadliest Duckling", "style/vpk/icons/028e0a15497ef28d92c42f976724f116f1647046.png", "The Deadliest Duckling");
 itemList.addItem(1, 3, "The Deadliest Duckling", "style/vpk/icons/028e0a15497ef28d92c42f976724f116f1647046.png", "The Deadliest Duckling");
 itemList.addItem(3, 3, "The Deadliest Duckling", "style/vpk/icons/028e0a15497ef28d92c42f976724f116f1647046.png", "The Deadliest Duckling");
@@ -5646,7 +5634,6 @@ itemList.addItem(6, 3, "The Smissmas Caribou", "style/vpk/icons/63c513a183edb5e5
 itemList.addItem(6, 3, "Randolph the Blood-Nosed Caribou", "style/vpk/icons/475b560746b61f1607b7a0406a016d284af86c40.png", "Randolph the Blood-Nosed Caribou");
 itemList.addItem(0, 0, "Festive Force-a-Nature", "style/vpk/icons/294fb8ee100caee538e95b1ad4290fc12e0056fc.png", "Festive Force-a-Nature");
 itemList.addItem(5, 0, "Festive Crusader's Crossbow", "style/vpk/icons/3dd18155ae015d9cfb0aeee885b61d3389aacceb.png", "Festive Crusader's Crossbow");
-itemList.addItem(7, 1, "Festive Sapper", "style/vpk/icons/35904483e57e94d0d14917619800943e790e7418.png", "Festive Sapper");
 itemList.addItem(2, 1, "Festive Flare Gun", "style/vpk/icons/817e99d036ea6592a30a2658ec16303f10744979.png", "Festive Flare Gun");
 itemList.addItem(3, 2, "Festive Eyelander", "style/vpk/icons/d5f69aaad4a3841417c6d556116a3009b611e410.png", "Festive Eyelander");
 itemList.addItem(6, 1, "Festive Jarate", "style/vpk/icons/2b493cae98eb2fb952ffb2b5aa315a40a9ef87e0.png", "Festive Jarate");
@@ -5668,7 +5655,6 @@ itemList.addItem(3, 1, "The Tide Turner", "style/vpk/icons/320d2fa5f6b9f0a13e92d
 itemList.addItem(4, 2, "The Bread Bite", "style/vpk/icons/8913951e61c6b15a94222dbb9266618242c2aadc.png", "The Bread Bite");
 itemList.addItem(1, 1, "The B.A.S.E. Jumper", "style/vpk/icons/087d9db4d821f9f4ceb93c792b685f3ce17cce18.png", "The B.A.S.E. Jumper");
 itemList.addItem(3, 1, "The B.A.S.E. Jumper", "style/vpk/icons/087d9db4d821f9f4ceb93c792b685f3ce17cce18.png", "The B.A.S.E. Jumper");
-itemList.addItem(7, 1, "The Snack Attack", "style/vpk/icons/6ed1dfe1e472c509f51a6aea4c8dd8314f247759.png", "The Snack Attack");
 itemList.addItem(0, 0, "The Back Scatter", "style/vpk/icons/27f22896df333e094d559677a51bfc22146d6f26.png", "The Back Scatter");
 itemList.addItem(1, 0, "The Air Strike", "style/vpk/icons/488414d1a3009be8e0a1689095b00cab93bf1617.png", "The Air Strike");
 itemList.addItem(6, 1, "The Self-Aware Beauty Mark", "style/vpk/icons/e7243f252f54ed41c58af6531dd074af22caeabe.png", "The Self-Aware Beauty Mark");
@@ -5898,7 +5884,6 @@ itemList.addItem(4, 3, "Poker Visor 2026", "style/vpk/icons/4bed994edcb1f1b65717
 itemList.addItem(0, 1, "TTG Max Pistol - Poker Night 2026", "style/vpk/icons/00f6ade8c54dc7c9122726e48f35a818bd5f4a58.png", "TTG Max Pistol - Poker Night 2026");
 itemList.addItem(8, 1, "TTG Max Pistol - Poker Night 2026", "style/vpk/icons/00f6ade8c54dc7c9122726e48f35a818bd5f4a58.png", "TTG Max Pistol - Poker Night 2026");
 itemList.addItem(3, 3, "TTG Glasses 2026", "style/vpk/icons/85868decc7c6ed5f1d31498f528ffcb22ac3f8b2.png", "TTG Glasses 2026");
-itemList.addItem(7, 1, "TTG Watch 2026", "style/vpk/icons/af20d6a0f9d66f4068cc874bb81a030918dd96c3.png", "TTG Watch 2026");
 itemList.addItem(4, 0, "Iron Curtain 2026", "style/vpk/icons/9aaf447eb87ea392aafe243294f4d71cb3f53420.png", "Iron Curtain 2026");
 itemList.addItem(0, 3, "World Traveler", "style/vpk/icons/532e04719facd02323cbb06e1769411ce8673c44.png", "World Traveler");
 itemList.addItem(6, 3, "World Traveler", "style/vpk/icons/532e04719facd02323cbb06e1769411ce8673c44.png", "World Traveler");

@@ -1,5 +1,6 @@
 > [!TIP]
 > You can access the latest push at https://snivyfilms.github.io/mvm.tf-fixed/
+> You can try out the beta builds at https://snivyfilms.github.io/mvm.tf-fixed/beta/
 
 This is a source code downloaded and rebuild of https://mvm.tf/. Which as of making this readme is still up and available to use.
 

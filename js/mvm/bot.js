@@ -71,7 +71,11 @@ function Bot(templateName, isUserTemplate)
 				div.item = w;
 				if (w!= null) {
 					itemDiv.innerHTML = w.itemName;
-					div.style.backgroundImage = 'url("style/img/' + w.image + '.png")';
+					if (/^(data|blob|https?):/.test(w.image) || /^style\/.*\.(png|jpg|jpeg|gif|svg)$/i.test(w.image)) {
+						div.style.backgroundImage = 'url("' + w.image + '")';
+					} else {
+						div.style.backgroundImage = 'url("style/vpk/icons/missing.png")';
+					}
 				}
 				else {
 	   				addClassName(div, "ItemRemoveElementImg");
@@ -1443,6 +1447,3 @@ Bot.prototype.create = function() {
 
 	this.hideSmall();
 }
-
-
-

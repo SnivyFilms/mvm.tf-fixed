@@ -227,7 +227,10 @@
     display:inline-block;
     width:10em;
     height:10em;
-    background-size: 100% auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: auto;
     overflow:hidden;
 }
 

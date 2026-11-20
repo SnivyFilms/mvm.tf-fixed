@@ -1026,7 +1026,11 @@ BotViewer.prototype.updateItems = function() {
 		var weapon = bot.getItem(slot);
 		if (weapon!=null) {
 			removeClassName(this.weaponSlot[slot], "ItemAddElementImg");
-			this.weaponSlot[slot].style.backgroundImage = 'url("style/img/' + weapon.image + '.png")';
+			if (/^(data|blob|https?):/.test(weapon.image) || /^style\/.*\.(png|jpg|jpeg|gif|svg)$/i.test(weapon.image)) {
+				this.weaponSlot[slot].style.backgroundImage = 'url("' + weapon.image + '")';
+			} else {
+				this.weaponSlot[slot].style.backgroundImage = 'url("style/vpk/icons/missing.png")';
+			}
 		} else {
 			this.weaponSlot[slot].style.backgroundImage = 'url("../style/img/add.svg")';
 			this.weaponSlot[slot].style.backgroundImage = '';

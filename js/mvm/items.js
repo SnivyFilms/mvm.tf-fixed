@@ -39,9 +39,24 @@ function Items()
 		    var d = itemListByClass[classId];
 		    if (c&&d)
 		    {
+		        var existing = d[nameLower];
+		        if (existing && existing.slotId === slotId) {
+		            if (image && (
+		                !existing.image ||
+		                existing.image.indexOf("all_missing") >= 0 ||
+		                /^style\/vpk\/icons\//.test(image)
+		            )) {
+		                existing.image = image;
+		            }
+		            if (itemName && !/^#/.test(itemName)) existing.itemName = itemName;
+		            if (itemName) d[itemName.toLowerCase()] = existing;
+		            return existing;
+		        }
 		        var w = new Item(nameLower, image, itemName, classId, slotId);
 		        c[slotId].push(w);
 				d[nameLower] = w;
+		        if (itemName) d[itemName.toLowerCase()] = w;
+		        return w;
 		    }
         };
 	    // getItems
@@ -135,6 +150,17 @@ function Items()
 		    }
 		    return weapon;
         };
+	    Items.prototype.getItemCount = function()
+		{
+		    var count = 0;
+		    for (var classId = 0; classId < itemList.length; classId++) {
+		        if (!itemList[classId]) continue;
+		        for (var slotId = 0; slotId <= SLOT_MAX; slotId++) {
+		            if (itemList[classId][slotId]) count += itemList[classId][slotId].length;
+		        }
+		    }
+		    return count;
+		};
 
         Items.initialized = true;
     }

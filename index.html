@@ -282,7 +282,31 @@
 		TF2 fonts & icons are copyrighted <a href="https://www.valvesoftware.com/legal.html">Valve Corporation</a>
 	</div>
 	<div class="contact"><a href="https://github.com/SnivyFilms/mvm.tf-fixed/issues">Contact</a></div>
+	<div class="last-updated" id="last-updated" aria-live="polite" style="color:#EEEEEE;font-family:Verdana,sans-serif;font-size:9px;text-align:center;margin-top:4px;">Last updated: checking...</div>
 	<script src="js/mvm/mvm.js"></script>
+	<script>
+		(function () {
+			var status = document.getElementById("last-updated");
+			fetch("https://api.github.com/repos/SnivyFilms/mvm.tf-fixed", {
+				headers: { "Accept": "application/vnd.github+json" }
+			})
+				.then(function (response) {
+					if (!response.ok) throw new Error("GitHub API request failed");
+					return response.json();
+				})
+				.then(function (repository) {
+					if (!repository.pushed_at) throw new Error("Push date unavailable");
+					var pushedAt = new Date(repository.pushed_at);
+					status.textContent = "Last updated: " + pushedAt.toLocaleString(undefined, {
+						dateStyle: "long",
+						timeStyle: "short"
+					});
+				})
+				.catch(function () {
+					status.textContent = "Last updated: unavailable";
+				});
+		})();
+	</script>
 	<iframe name="hiddenmyiframe" id="hiddenmyiframe" style="height:0;width:0;display:none;" onload="IframeLoaded();"></iframe>
 		<div id="sits" onclick="SteamLogin('/');">&nbsp;</div>
 	<div><a href="https://github.com/SnivyFilms/mvm.tf-fixed/issues">Contact</a></div>

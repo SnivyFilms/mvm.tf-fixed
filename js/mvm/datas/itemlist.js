@@ -5011,7 +5011,7 @@ itemList.addItem(3, 1, "Gold Botkiller Stickybomb Launcher Mk.I", "style/vpk/ico
 itemList.addItem(2, 0, "Gold Botkiller Flame Thrower Mk.I", "style/vpk/icons/aa15431f959ebcb1580faf72f01754f1bcddfc92.png", "Gold Botkiller Flame Thrower Mk.I");
 itemList.addItem(0, 0, "Gold Botkiller Scattergun Mk.I", "style/vpk/icons/9a1ff5e4fea7fb3e45bba1fcdad9532579e7df1b.png", "Gold Botkiller Scattergun Mk.I");
 itemList.addItem(1, 0, "Gold Botkiller Rocket Launcher Mk.I", "style/vpk/icons/29152098b58ecacd718e8218f3b3f66b6ceb0200.png", "Gold Botkiller Rocket Launcher Mk.I");
-itemList.addItem(4, 0, "The Huo Long Heatmaker", "style/vpk/icons/ec9b29459c7c56fc16343f98c7da0661069212b8.png", "The Huo Long Heatmaker");
+itemList.addItem(4, 0, "The Huo Long Heatmaker", "style/vpk/icons/ec9b29459c7c56fc16343f98c7da0661069212b8.png", "The Huo Long Heater");
 itemList.addItem(0, 1, "The Flying Guillotine", "style/vpk/icons/39917f23fa4d03af06d69a2e8df57cd751708e50.png", "The Flying Guillotine");
 itemList.addItem(2, 2, "The Neon Annihilator", "style/vpk/icons/63f611a98529340772b9be414bad41983dbdd546.png", "The Neon Annihilator");
 itemList.addItem(0, 3, "The Triad Trinket", "style/vpk/icons/8d231db5f5b0f0cd3123a160404ade61bd952d61.png", "The Triad Trinket");
